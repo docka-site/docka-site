@@ -14,7 +14,7 @@ const navLinks = [
 ];
 
 const produtosLinks = [
-  { label: "E&O",   href: "/eo" },
+  { label: "RC Profissional", href: "/eo" },
   { label: "Cyber", href: "/cyber" },
   { label: "D&O",   href: "/dao" },
 ];
@@ -258,7 +258,7 @@ export function Layout({ children }: LayoutProps) {
             <div>
               <h4 style={{ fontSize: "0.72rem", fontWeight: 600, color: "#fff", margin: "0 0 1rem", letterSpacing: "0.12em", textTransform: "uppercase", fontFamily: "'Montserrat', sans-serif" }}>Produtos</h4>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
-                {[{ label: "E&O", href: "/eo" }, { label: "Cyber", href: "/cyber" }, { label: "D&O", href: "/dao" }, { label: "Embedded", href: "/embedded" }].map(({ label, href }) => (
+                {[{ label: "RC Profissional", href: "/eo" }, { label: "Cyber", href: "/cyber" }, { label: "D&O", href: "/dao" }, { label: "Embedded", href: "/embedded" }].map(({ label, href }) => (
                   <Link key={label} href={href} style={{ fontSize: "0.88rem", color: "rgba(255,255,255,0.35)", textDecoration: "none", fontFamily: "'Hind', sans-serif", transition: "color 0.2s" }}
                     onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.75)")}
                     onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.35)")}

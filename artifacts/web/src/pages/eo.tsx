@@ -19,7 +19,7 @@ export default function Eo() {
           <div style={{ maxWidth: 640 }}>
             <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--tech-green)" }}>Produto · Gestão de Riscos</span>
             <h1 className="animate-fade-up" style={{ opacity: 0, fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: "clamp(2rem,4vw,3.2rem)", textTransform: "uppercase", color: "#fff", lineHeight: 1.05, margin: "10px 0 0" }}>
-              E&amp;O<br /><span style={{ color: "var(--tech-green)" }}>ERROS &amp; OMISSÕES</span>
+              RC <span style={{ color: "var(--tech-green)" }}>PROFISSIONAL</span>
             </h1>
             <p className="animate-fade-up delay-1" style={{ opacity: 0, color: "rgba(255,255,255,0.65)", fontSize: "1rem", lineHeight: 1.65, margin: "18px 0 0", maxWidth: 520, fontFamily: "'Hind', sans-serif" }}>
               Responsabilidade profissional por erros, falhas e omissões na prestação de serviços. Para fintechs que prestam serviços financeiros e tecnológicos a clientes — onde uma falha pode gerar perda financeira para terceiros e ação de indenização.
@@ -38,7 +38,7 @@ export default function Eo() {
                 Quando um erro técnico gera perda para seu cliente
               </h2>
               <p style={{ fontSize: "0.92rem", color: "rgba(13,31,78,0.65)", lineHeight: 1.8, margin: "0 0 16px", fontFamily: "'Hind', sans-serif" }}>
-                O seguro E&amp;O (Errors &amp; Omissions), também chamado de Responsabilidade Civil Profissional, cobre ações movidas por clientes que sofreram perda financeira em razão de falha, erro ou omissão no serviço prestado.
+                O seguro RC Profissional (Responsabilidade Civil Profissional, também conhecido internacionalmente como E&amp;O — Errors &amp; Omissions) cobre ações movidas por clientes que sofreram perda financeira em razão de falha, erro ou omissão no serviço prestado.
               </p>
               <p style={{ fontSize: "0.92rem", color: "rgba(13,31,78,0.65)", lineHeight: 1.8, margin: "0 0 16px", fontFamily: "'Hind', sans-serif" }}>
                 Para fintechs, isso inclui falhas em processamento de pagamentos, erros em análise de crédito, bugs que causam prejuízo financeiro ao usuário, e falhas em serviços de custódia ou gestão de ativos.
@@ -74,7 +74,7 @@ export default function Eo() {
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 2rem" }}>
           <div className="fade-in" style={{ marginBottom: 40 }}>
             <span className="section-label">Coberturas</span>
-            <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(1.4rem,2.5vw,1.9rem)", fontWeight: 700, color: "var(--navy-800)", margin: "8px 0 0" }}>O que um E&amp;O bem estruturado cobre</h2>
+            <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(1.4rem,2.5vw,1.9rem)", fontWeight: 700, color: "var(--navy-800)", margin: "8px 0 0" }}>O que um RC Profissional bem estruturado cobre</h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 20 }}>
             {[
@@ -97,7 +97,7 @@ export default function Eo() {
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 2rem", textAlign: "center" }} className="fade-in">
           <span className="section-label">Análise gratuita</span>
           <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(1.4rem,2.5vw,1.9rem)", fontWeight: 700, color: "#fff", margin: "8px 0 16px" }}>
-            Sua empresa tem E&amp;O adequado para os serviços que presta?
+            Sua empresa tem RC Profissional adequado para os serviços que presta?
           </h2>
           <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.95rem", lineHeight: 1.7, maxWidth: 500, margin: "0 auto 32px", fontFamily: "'Hind', sans-serif" }}>
             Analisamos sua apólice atual ou mapeamos o que você precisa. Relatório técnico completo em 3 a 4 dias, sem custo.
