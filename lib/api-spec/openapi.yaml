@@ -1,0 +1,314 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: Amparo - Plataforma de Seguros RC
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: leads
+    description: Lead capture
+  - name: quotes
+    description: Quote management
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+
+  /leads:
+    post:
+      operationId: createLead
+      tags: [leads]
+      summary: Capture lead email
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateLeadRequest"
+      responses:
+        "201":
+          description: Lead created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Lead"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /quotes:
+    post:
+      operationId: createQuote
+      tags: [quotes]
+      summary: Submit insurance quote form
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateQuoteRequest"
+      responses:
+        "201":
+          description: Quote submitted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Quote"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+    get:
+      operationId: listQuotes
+      tags: [quotes]
+      summary: List all quotes (admin)
+      responses:
+        "200":
+          description: List of quotes
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuoteListResponse"
+
+  /quotes/{id}:
+    get:
+      operationId: getQuote
+      tags: [quotes]
+      summary: Get quote by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Quote details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Quote"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+      required:
+        - error
+        - message
+
+    CreateLeadRequest:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+      required:
+        - email
+
+    Lead:
+      type: object
+      properties:
+        id:
+          type: integer
+        email:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - email
+        - createdAt
+
+    AtividadeProfissional:
+      type: string
+      enum:
+        - advogado
+        - arquiteto
+        - dentista
+        - emp_tecnologia
+        - contador
+        - medico
+        - outras_atividades
+
+    TipoSeguro:
+      type: string
+      enum:
+        - novo
+        - renovacao
+
+    DistribuicaoGeografica:
+      type: string
+      enum:
+        - local
+        - nacional
+        - internacional
+
+    QuoteStatus:
+      type: string
+      enum:
+        - pendente
+        - ativo
+        - cancelado
+
+    CreateQuoteRequest:
+      type: object
+      properties:
+        nome:
+          type: string
+        telefone:
+          type: string
+        cnpj:
+          type: string
+        email:
+          type: string
+          format: email
+        atividadeProfissional:
+          $ref: "#/components/schemas/AtividadeProfissional"
+        tipoSeguro:
+          $ref: "#/components/schemas/TipoSeguro"
+        faturamentoAnual:
+          type: number
+        dataInicioOperacoes:
+          type: string
+          format: date
+        distribuicaoGeografica:
+          $ref: "#/components/schemas/DistribuicaoGeografica"
+        qtdAcoes:
+          type: integer
+          minimum: 0
+        valorAcoes:
+          type: number
+          minimum: 0
+        qtdSinistro:
+          type: integer
+          minimum: 0
+        valorSinistro:
+          type: number
+          minimum: 0
+        politicasRh:
+          type: boolean
+      required:
+        - nome
+        - telefone
+        - cnpj
+        - email
+        - atividadeProfissional
+        - tipoSeguro
+        - faturamentoAnual
+        - dataInicioOperacoes
+        - distribuicaoGeografica
+        - qtdAcoes
+        - valorAcoes
+        - qtdSinistro
+        - valorSinistro
+        - politicasRh
+
+    Quote:
+      type: object
+      properties:
+        id:
+          type: integer
+        nome:
+          type: string
+        telefone:
+          type: string
+        cnpj:
+          type: string
+        email:
+          type: string
+        atividadeProfissional:
+          $ref: "#/components/schemas/AtividadeProfissional"
+        tipoSeguro:
+          $ref: "#/components/schemas/TipoSeguro"
+        faturamentoAnual:
+          type: number
+        dataInicioOperacoes:
+          type: string
+        distribuicaoGeografica:
+          $ref: "#/components/schemas/DistribuicaoGeografica"
+        qtdAcoes:
+          type: integer
+        valorAcoes:
+          type: number
+        qtdSinistro:
+          type: integer
+        valorSinistro:
+          type: number
+        politicasRh:
+          type: boolean
+        status:
+          $ref: "#/components/schemas/QuoteStatus"
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - nome
+        - telefone
+        - cnpj
+        - email
+        - atividadeProfissional
+        - tipoSeguro
+        - faturamentoAnual
+        - dataInicioOperacoes
+        - distribuicaoGeografica
+        - qtdAcoes
+        - valorAcoes
+        - qtdSinistro
+        - valorSinistro
+        - politicasRh
+        - status
+        - createdAt
+
+    QuoteListResponse:
+      type: object
+      properties:
+        quotes:
+          type: array
+          items:
+            $ref: "#/components/schemas/Quote"
+        total:
+          type: integer
+      required:
+        - quotes
+        - total
