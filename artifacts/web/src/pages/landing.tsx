@@ -10,7 +10,7 @@ export default function Landing() {
       {/* ── HERO ── texto no topo-esquerdo, foto veleiro direita */}
       <section style={{
         position: "relative",
-        minHeight: "calc(72vh + 80px)",
+        minHeight: "calc(58vh + 80px)",
         overflow: "hidden",
         display: "flex",
         alignItems: "flex-start",
@@ -32,7 +32,7 @@ export default function Landing() {
         }} />
 
         {/* Conteúdo — começa no topo */}
-        <div style={{ position: "relative", zIndex: 2, maxWidth: "80rem", margin: "0 auto", padding: "8rem 2rem 4rem", width: "100%" }}>
+        <div style={{ position: "relative", zIndex: 2, maxWidth: "80rem", margin: "0 auto", padding: "6rem 2rem 3rem", width: "100%" }}>
           <div style={{ maxWidth: 640 }}>
 
             <h1 className="animate-fade-up" style={{
@@ -138,7 +138,7 @@ export default function Landing() {
               },
             ].map(({ icon, title, desc }, i) => (
               <div key={title} style={{
-                padding: "2.2rem 1.6rem",
+                padding: "1.2rem 1.6rem",
                 borderRight: i < 3 ? "1px solid rgba(255,255,255,0.07)" : "none",
                 display: "flex", flexDirection: "column", gap: 10,
               }}>

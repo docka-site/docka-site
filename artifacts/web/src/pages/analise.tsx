@@ -31,7 +31,7 @@ export default function Analise() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="hero-gradient relative overflow-hidden" style={{ padding: "140px 0 80px" }}>
+      <section className="hero-gradient relative overflow-hidden" style={{ padding: "140px 0 80px", marginTop: "-80px" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto", padding: "0 1.5rem" }}>
           <div style={{ maxWidth: 640 }}>
             <span className="section-label">Sem custo · Sem compromisso</span>
