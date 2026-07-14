@@ -6,7 +6,10 @@
       "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); node --version; npm --version)",
       "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); corepack enable; corepack prepare pnpm@latest --activate; pnpm --version)",
       "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); cd \"C:\\\\Users\\\\josee\\\\OneDrive\\\\Área de Trabalho\\\\Docka\\\\Site\"; pnpm install)",
-      "Bash(tail -50 /tmp/vite-dev.log)"
+      "Bash(tail -50 /tmp/vite-dev.log)",
+      "PowerShell(winget install -e --id PostgreSQL.PostgreSQL.17 --accept-package-agreements --accept-source-agreements)",
+      "Bash(curl -s http://localhost:8082/api/health)",
+      "Bash(curl -s http://localhost:8082/api/leads -X POST -H \"Content-Type: application/json\" -d '{\"email\":\"teste@teste.com\"}')"
     ]
   }
 }
