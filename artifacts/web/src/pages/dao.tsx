@@ -19,7 +19,7 @@ export default function Dao() {
           <div style={{ maxWidth: 640 }}>
             <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--tech-green)" }}>Produto · Gestão de Riscos</span>
             <h1 className="animate-fade-up" style={{ opacity: 0, fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: "clamp(2rem,4vw,3.2rem)", textTransform: "uppercase", color: "#fff", lineHeight: 1.05, margin: "10px 0 0" }}>
-              D&amp;O<br /><span style={{ color: "var(--tech-green)" }}>Diretores &amp; Administradores</span>
+              RC <span style={{ color: "var(--tech-green)" }}>DIRETORES</span>
             </h1>
             <p className="animate-fade-up delay-1" style={{ opacity: 0, color: "rgba(255,255,255,0.65)", fontSize: "1rem", lineHeight: 1.65, margin: "18px 0 0", maxWidth: 520, fontFamily: "'Hind', sans-serif" }}>
               Protege diretores, administradores e conselheiros contra ações movidas por terceiros em razão de decisões tomadas no exercício do cargo. Essencial para fintechs com investidores institucionais.
@@ -38,7 +38,7 @@ export default function Dao() {
                 Proteção para quem toma decisões
               </h2>
               <p style={{ fontSize: "0.92rem", color: "rgba(13,31,78,0.65)", lineHeight: 1.8, margin: "0 0 16px", fontFamily: "'Hind', sans-serif" }}>
-                O seguro D&amp;O (Directors &amp; Officers) cobre a responsabilidade pessoal de diretores, administradores e conselheiros por atos de gestão — decisões estratégicas, alocações de capital, contratações, demissões, comunicados ao mercado.
+                O seguro RC Diretores (Responsabilidade Civil de Diretores e Administradores, também conhecido internacionalmente como D&amp;O — Directors &amp; Officers) cobre a responsabilidade pessoal de diretores, administradores e conselheiros por atos de gestão — decisões estratégicas, alocações de capital, contratações, demissões, comunicados ao mercado.
               </p>
               <p style={{ fontSize: "0.92rem", color: "rgba(13,31,78,0.65)", lineHeight: 1.8, margin: "0 0 16px", fontFamily: "'Hind', sans-serif" }}>
                 Qualquer pessoa afetada por uma decisão da gestão pode acionar: sócios minoritários, investidores, credores, funcionários, reguladores como o Banco Central e a CVM.
@@ -49,7 +49,7 @@ export default function Dao() {
             </div>
             <div className="fade-in" style={{ background: "var(--navy-800)", borderRadius: 10, padding: 32 }}>
               <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", fontWeight: 700, color: "var(--tech-green)", letterSpacing: "0.1em", textTransform: "uppercase", margin: "0 0 20px" }}>
-                Quando o D&amp;O é acionado
+                Quando o RC Diretores é acionado
               </h3>
               <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                 {[
@@ -74,7 +74,7 @@ export default function Dao() {
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 2rem" }}>
           <div className="fade-in" style={{ marginBottom: 40 }}>
             <span className="section-label">Coberturas típicas</span>
-            <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(1.4rem,2.5vw,1.9rem)", fontWeight: 700, color: "var(--navy-800)", margin: "8px 0 0" }}>O que um D&amp;O bem estruturado cobre</h2>
+            <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(1.4rem,2.5vw,1.9rem)", fontWeight: 700, color: "var(--navy-800)", margin: "8px 0 0" }}>O que um RC Diretores bem estruturado cobre</h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 20 }}>
             {[
@@ -140,10 +140,10 @@ export default function Dao() {
       <section style={{ background: "var(--cream-100)", padding: "5rem 0" }}>
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 2rem", textAlign: "center" }} className="fade-in">
           <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(1.4rem,2.5vw,1.9rem)", fontWeight: 700, color: "var(--navy-800)", margin: "0 0 16px" }}>
-            Sua apólice de D&amp;O foi analisada por um atuário?
+            Sua apólice de RC Diretores foi analisada por um atuário?
           </h2>
           <p style={{ color: "rgba(13,31,78,0.6)", fontSize: "0.95rem", lineHeight: 1.7, maxWidth: 500, margin: "0 auto 32px", fontFamily: "'Hind', sans-serif" }}>
-            Se você já tem D&amp;O, analisamos sua apólice linha por linha e apresentamos os gaps. Se ainda não tem, mapeamos o que sua empresa precisa. Gratuito, sem compromisso.
+            Se você já tem RC Diretores, analisamos sua apólice linha por linha e apresentamos os gaps. Se ainda não tem, mapeamos o que sua empresa precisa. Gratuito, sem compromisso.
           </p>
           <Link href="/analise" className="btn-gold">Solicitar análise técnica gratuita</Link>
         </div>

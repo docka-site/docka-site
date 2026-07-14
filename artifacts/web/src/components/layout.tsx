@@ -15,8 +15,8 @@ const navLinks = [
 
 const produtosLinks = [
   { label: "RC Profissional", href: "/eo" },
-  { label: "Cyber", href: "/cyber" },
-  { label: "D&O",   href: "/dao" },
+  { label: "Riscos Cibernéticos", href: "/cyber" },
+  { label: "RC Diretores", href: "/dao" },
 ];
 
 export function Layout({ children }: LayoutProps) {
@@ -107,13 +107,13 @@ export function Layout({ children }: LayoutProps) {
                   <div style={{
                     background: "rgba(5,12,28,0.97)", backdropFilter: "blur(12px)",
                     border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8,
-                    padding: "8px 0", minWidth: 140,
+                    padding: "8px 0", minWidth: 220,
                     boxShadow: "0 8px 32px rgba(0,0,0,0.4)",
                   }}>
                     {produtosLinks.map(({ label, href }) => (
                       <Link key={label} href={href} onClick={() => setProdutosOpen(false)}
                         style={{
-                          display: "block", padding: "10px 20px",
+                          display: "block", padding: "10px 20px", whiteSpace: "nowrap",
                           color: location === href ? "var(--tech-green)" : "rgba(255,255,255,0.75)",
                           fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.09em",
                           textTransform: "uppercase", textDecoration: "none",
@@ -258,7 +258,7 @@ export function Layout({ children }: LayoutProps) {
             <div>
               <h4 style={{ fontSize: "0.72rem", fontWeight: 600, color: "#fff", margin: "0 0 1rem", letterSpacing: "0.12em", textTransform: "uppercase", fontFamily: "'Montserrat', sans-serif" }}>Produtos</h4>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
-                {[{ label: "RC Profissional", href: "/eo" }, { label: "Cyber", href: "/cyber" }, { label: "D&O", href: "/dao" }, { label: "Embedded", href: "/embedded" }].map(({ label, href }) => (
+                {[{ label: "RC Profissional", href: "/eo" }, { label: "Riscos Cibernéticos", href: "/cyber" }, { label: "RC Diretores", href: "/dao" }, { label: "Embedded", href: "/embedded" }].map(({ label, href }) => (
                   <Link key={label} href={href} style={{ fontSize: "0.88rem", color: "rgba(255,255,255,0.35)", textDecoration: "none", fontFamily: "'Hind', sans-serif", transition: "color 0.2s" }}
                     onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.75)")}
                     onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.35)")}

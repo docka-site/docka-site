@@ -19,10 +19,10 @@ export default function Cyber() {
           <div style={{ maxWidth: 640 }}>
             <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--tech-green)" }}>Produto · Gestão de Riscos</span>
             <h1 className="animate-fade-up" style={{ opacity: 0, fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: "clamp(2rem,4vw,3.2rem)", textTransform: "uppercase", color: "#fff", lineHeight: 1.05, margin: "10px 0 0" }}>
-              CYBER<br /><span style={{ color: "var(--tech-green)" }}>RISCOS CIBERNÉTICOS</span>
+              RISCOS <span style={{ color: "var(--tech-green)" }}>CIBERNÉTICOS</span>
             </h1>
             <p className="animate-fade-up delay-1" style={{ opacity: 0, color: "rgba(255,255,255,0.65)", fontSize: "1rem", lineHeight: 1.65, margin: "18px 0 0", maxWidth: 520, fontFamily: "'Hind', sans-serif" }}>
-              Cobertura técnica para incidentes de segurança da informação — vazamento de dados, ransomware, interrupção de sistemas e responsabilidade por dados de terceiros. Crítico para fintechs que processam dados financeiros e precisam estar em conformidade com a LGPD.
+              O seguro de Riscos Cibernéticos (também conhecido como Cyber Insurance) oferece cobertura técnica para incidentes de segurança da informação — vazamento de dados, ransomware, interrupção de sistemas e responsabilidade por dados de terceiros. Crítico para fintechs que processam dados financeiros e precisam estar em conformidade com a LGPD.
             </p>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function Cyber() {
                 Exclusões que eliminam justamente os riscos que você tem
               </h2>
               <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.92rem", lineHeight: 1.75, margin: "0 0 24px", fontFamily: "'Hind', sans-serif" }}>
-                Apólices de Cyber variam muito em qualidade técnica. As exclusões abaixo aparecem com frequência e podem tornar a cobertura inútil para fintechs.
+                Apólices de Riscos Cibernéticos variam muito em qualidade técnica. As exclusões abaixo aparecem com frequência e podem tornar a cobertura inútil para fintechs.
               </p>
               <Link href="/analise" className="btn-gold">Analisar minha apólice</Link>
             </div>
@@ -145,7 +145,7 @@ export default function Cyber() {
       <section style={{ background: "var(--cream-100)", padding: "5rem 0" }}>
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 2rem", textAlign: "center" }} className="fade-in">
           <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(1.4rem,2.5vw,1.9rem)", fontWeight: 700, color: "var(--navy-800)", margin: "0 0 16px" }}>
-            Sua apólice de Cyber cobre ransomware?
+            Sua apólice de Riscos Cibernéticos cobre ransomware?
           </h2>
           <p style={{ color: "rgba(13,31,78,0.6)", fontSize: "0.95rem", lineHeight: 1.7, maxWidth: 500, margin: "0 auto 32px", fontFamily: "'Hind', sans-serif" }}>
             Analisamos sua apólice e identificamos o que está e o que não está coberto. Gratuito, relatório técnico completo em 3 a 4 dias.
