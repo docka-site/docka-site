@@ -1,0 +1,11 @@
+<svg viewBox="0 0 480 110" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(14,5) scale(0.85)">
+    <circle cx="50" cy="50" r="36" fill="none" stroke="#0E2A47" stroke-width="2"/>
+    <line x1="50" y1="14" x2="50" y2="20" stroke="#0E2A47" stroke-width="2.2" stroke-linecap="butt"/>
+    <line x1="86" y1="50" x2="80" y2="50" stroke="#0E2A47" stroke-width="2.2" stroke-linecap="butt"/>
+    <line x1="50" y1="86" x2="50" y2="80" stroke="#0E2A47" stroke-width="2.2" stroke-linecap="butt"/>
+    <line x1="14" y1="50" x2="20" y2="50" stroke="#0E2A47" stroke-width="2.2" stroke-linecap="butt"/>
+    <path d="M50,22 L56,50 L50,78 L44,50 Z" fill="none" stroke="#0E2A47" stroke-width="2.2" stroke-linecap="butt" stroke-linejoin="miter"/>
+  </g>
+  <text x="140" y="65" font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="32" fill="#0E2A47">Docka Seguros</text>
+</svg>
