@@ -78,10 +78,10 @@ export default function Eo() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 20 }}>
             {[
-              { t: "Despesas de defesa", d: "Honorários advocatícios e custas processuais para defender a empresa em ações de clientes, pagos antecipadamente." },
-              { t: "Indenizações a clientes", d: "Valores a pagar a clientes que comprovarem perda financeira decorrente de erro ou omissão na prestação do serviço." },
-              { t: "Acordos extrajudiciais", d: "Custos de acordos negociados antes de processo judicial, muitas vezes a solução mais rápida e menos custosa." },
-              { t: "Reclamações regulatórias", d: "Defesa em processos administrativos abertos por reguladores (BACEN, CVM) por falha na prestação de serviços regulados." },
+              { t: "Despesas de defesa", d: "Se um cliente processar sua empresa, o seguro paga o advogado e as custas do processo — adiantado, antes mesmo de saber quem vai vencer o caso." },
+              { t: "Indenizações a clientes", d: "Se a Justiça decidir que sua empresa causou prejuízo financeiro a um cliente por erro ou falha no serviço, o seguro cobre o valor da indenização." },
+              { t: "Acordos extrajudiciais", d: "Muitos casos se resolvem sem ir a julgamento. O seguro cobre o custo de um acordo negociado — geralmente mais rápido e mais barato do que um processo." },
+              { t: "Reclamações regulatórias", d: "Se o Banco Central ou a CVM abrir um processo administrativo por falha na prestação de um serviço regulado, o seguro cobre a defesa." },
             ].map(({ t, d }) => (
               <div key={t} className="card fade-in" style={{ padding: 28 }}>
                 <h4 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--navy-800)", margin: "0 0 8px", fontFamily: "'Montserrat', sans-serif" }}>{t}</h4>

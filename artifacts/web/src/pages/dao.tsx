@@ -78,9 +78,9 @@ export default function Dao() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 20 }}>
             {[
-              { tag: "Cobertura A", t: "Proteção individual", d: "Cobre o patrimônio pessoal dos diretores quando a empresa não pode ou não quer indenizá-los." },
-              { tag: "Cobertura B", t: "Reembolso à empresa", d: "Reembolsa a empresa quando ela arca com as despesas de defesa dos diretores em seu lugar." },
-              { tag: "Cobertura C", t: "Proteção da entidade", d: "Cobre a própria empresa em ações envolvendo valores mobiliários — comum em fintechs com investidores institucionais." },
+              { tag: "Seu patrimônio pessoal", t: "Proteção individual", d: "Cobre o patrimônio pessoal dos diretores quando a empresa não pode ou não quer indenizá-los. (Conhecida no mercado como Cobertura A.)" },
+              { tag: "O caixa da empresa", t: "Reembolso à empresa", d: "Reembolsa a empresa quando ela arca com as despesas de defesa dos diretores em seu lugar. (Cobertura B.)" },
+              { tag: "A empresa em si", t: "Proteção da entidade", d: "Cobre a própria empresa em ações envolvendo valores mobiliários — comum em fintechs com investidores institucionais. (Cobertura C.)" },
             ].map(({ tag, t, d }) => (
               <div key={tag} className="card fade-in" style={{ padding: 28 }}>
                 <div style={{ fontSize: "0.68rem", fontWeight: 700, color: "var(--tech-green)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 10, fontFamily: "'Montserrat', sans-serif" }}>{tag}</div>
@@ -122,8 +122,8 @@ export default function Dao() {
                 {[
                   { t: "Exclusão de fraude e desonestidade", r: "Risco: se a exclusão for ampla demais, qualquer alegação de má-fé pode afastar toda a cobertura, mesmo antes de comprovação." },
                   { t: "Exclusão de conflito de interesses", r: "Risco: em fintechs com sócios fundadores no board, transações entre partes relacionadas podem ser excluídas por padrão." },
-                  { t: "Retroatividade limitada", r: "Risco: apólice sem retroatividade plena não cobre decisões tomadas antes da vigência, mesmo que o processo seja aberto agora." },
-                  { t: "Limite insuficiente para múltiplos sinistros", r: "Risco: limite agregado baixo esgota-se em um único sinistro, deixando diretores desprotegidos em ações subsequentes." },
+                  { t: "Decisões antigas ficam de fora (retroatividade limitada)", r: "Risco: se a apólice não cobrir decisões tomadas antes de sua contratação, um processo aberto hoje sobre uma decisão antiga pode não ter cobertura nenhuma." },
+                  { t: "Um segundo processo pode ficar sem cobertura (limite agregado insuficiente)", r: "Risco: o valor total coberto pela apólice pode se esgotar em um único caso, deixando os diretores desprotegidos se surgir um segundo processo no mesmo ano." },
                 ].map(({ t, r }) => (
                   <div key={t} style={{ padding: "16px 18px", background: "rgba(255,255,255,0.04)", borderRadius: 6, border: "1px solid rgba(255,255,255,0.08)" }}>
                     <div style={{ fontSize: "0.85rem", fontWeight: 600, color: "#fff", marginBottom: 4, fontFamily: "'Montserrat', sans-serif" }}>{t}</div>

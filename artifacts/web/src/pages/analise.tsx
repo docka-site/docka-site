@@ -39,7 +39,7 @@ export default function Analise() {
               Análise técnica<br /><em>gratuita para<br />sua empresa</em>
             </h1>
             <p className="animate-fade-up delay-1" style={{ opacity: 0, color: "rgba(255,255,255,0.6)", fontSize: "1rem", lineHeight: 1.7, margin: "20px 0 0", maxWidth: 480 }}>
-              Eduardo analisa seu programa de seguros D&amp;O e Cyber com profundidade atuarial —
+              Eduardo analisa seu programa de seguros RC Diretores e Riscos Cibernéticos com profundidade atuarial —
               exclusões, gaps, benchmarks. Relatório técnico em 3 a 4 dias e reunião de apresentação.
             </p>
           </div>
@@ -168,7 +168,7 @@ export default function Analise() {
                     <label className="form-label">Situação atual de seguros</label>
                     <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 8 }}>
                       {[
-                        { v: "Já tenho apólices D&O/Cyber", l: "Já tenho apólices de D&O e/ou Cyber" },
+                        { v: "Já tenho apólices RC Diretores/Riscos Cibernéticos", l: "Já tenho apólices de RC Diretores e/ou Riscos Cibernéticos" },
                         { v: "Tenho alguns mas não todos",  l: "Tenho alguns mas não tenho tudo estruturado" },
                         { v: "Ainda não tenho seguros",     l: "Ainda não tenho — estou mapeando o que preciso" },
                       ].map(({ v, l }) => (

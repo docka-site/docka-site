@@ -83,7 +83,7 @@ export default function Cyber() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 24, marginBottom: 24 }}>
             <div className="card fade-in" style={{ padding: 32, background: "var(--navy-800)", border: "none" }}>
-              <div style={{ fontSize: "0.68rem", fontWeight: 700, color: "var(--tech-green)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 14, fontFamily: "'Montserrat', sans-serif" }}>Cobertura própria (First-party)</div>
+              <div style={{ fontSize: "0.68rem", fontWeight: 700, color: "var(--tech-green)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 14, fontFamily: "'Montserrat', sans-serif" }}>O que sua empresa paga diretamente (First-party)</div>
               <h4 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#fff", margin: "0 0 12px", fontFamily: "'Montserrat', sans-serif" }}>Custos que a empresa absorve diretamente</h4>
               <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 16 }}>
                 {["Custos de resposta ao incidente (forensic, notificação a titulares)", "Pagamento de extorsão cibernética (ransomware)", "Perda de receita por interrupção de sistemas", "Custos de restauração de sistemas e dados", "Gestão de crise e comunicação"].map(d => (
@@ -94,7 +94,7 @@ export default function Cyber() {
               </div>
             </div>
             <div className="card fade-in" style={{ padding: 32 }}>
-              <div style={{ fontSize: "0.68rem", fontWeight: 700, color: "var(--gold-500)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 14, fontFamily: "'Montserrat', sans-serif" }}>Responsabilidade civil (Third-party)</div>
+              <div style={{ fontSize: "0.68rem", fontWeight: 700, color: "var(--gold-500)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 14, fontFamily: "'Montserrat', sans-serif" }}>O que você paga a terceiros afetados (Third-party)</div>
               <h4 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--navy-800)", margin: "0 0 12px", fontFamily: "'Montserrat', sans-serif" }}>Reclamações de terceiros afetados</h4>
               <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 16 }}>
                 {["Ações de clientes cujos dados foram vazados", "Multas e penalidades regulatórias (ANPD, BACEN)", "Ações de parceiros afetados por incidente em seus sistemas", "Defesa jurídica em processos relacionados ao incidente", "Indenizações a titulares de dados por dano moral"].map(d => (
