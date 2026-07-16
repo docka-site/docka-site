@@ -50,34 +50,12 @@ export function Layout({ children }: LayoutProps) {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: NAV_H }}>
 
             {/* Logo */}
-            <Link href="/" style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none" }}>
-              {/* Veleiro SVG */}
-              <svg width="36" height="46" viewBox="0 0 36 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Mastro */}
-                <line x1="18" y1="1" x2="18" y2="36" stroke="white" strokeWidth="1.5"/>
-                {/* Vela principal (esquerda) */}
-                <path d="M17 3 L2 34 L17 34 Z" fill="white" opacity="0.95"/>
-                {/* Vela de popa (direita, menor) */}
-                <path d="M19 10 L30 34 L19 34 Z" fill="white" opacity="0.8"/>
-                {/* Casco */}
-                <path d="M1 36 Q18 42 35 36" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round"/>
-              </svg>
-              {/* Separador vertical */}
-              <div style={{ width: 1, height: 36, background: "rgba(255,255,255,0.4)" }} />
-              {/* Texto */}
-              <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
-                <span style={{
-                  fontFamily: "'Montserrat', sans-serif",
-                  fontWeight: 700, fontSize: "1.35rem",
-                  color: "#ffffff", letterSpacing: "0.04em",
-                }}>Docka</span>
-                <span style={{
-                  fontFamily: "'Montserrat', sans-serif",
-                  fontWeight: 400, fontSize: "0.6rem",
-                  color: "rgba(255,255,255,0.7)", letterSpacing: "0.28em",
-                  textTransform: "uppercase", marginTop: 3,
-                }}>SEGUROS</span>
-              </div>
+            <Link href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+              <img
+                src={`${import.meta.env.BASE_URL}images/docka-logo-horizontal.png`}
+                alt="Docka Seguros"
+                style={{ height: 48, width: "auto" }}
+              />
             </Link>
 
             {/* Desktop nav */}
