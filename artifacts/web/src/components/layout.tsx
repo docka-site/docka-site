@@ -50,12 +50,30 @@ export function Layout({ children }: LayoutProps) {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: NAV_H }}>
 
             {/* Logo */}
-            <Link href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
-              <img
-                src={`${import.meta.env.BASE_URL}images/docka-logo-horizontal.png`}
-                alt="Docka Seguros"
-                style={{ height: 48, width: "auto" }}
-              />
+            <Link href="/" style={{ display: "flex", alignItems: "center", gap: 3, textDecoration: "none" }}>
+              {/* Bússola */}
+              <svg width="46" height="46" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="35" stroke="white" strokeWidth="4"/>
+                <line x1="50" y1="10" x2="50" y2="20" stroke="white" strokeWidth="4.5" strokeLinecap="round"/>
+                <line x1="90" y1="50" x2="80" y2="50" stroke="white" strokeWidth="4.5" strokeLinecap="round"/>
+                <line x1="50" y1="90" x2="50" y2="80" stroke="white" strokeWidth="4.5" strokeLinecap="round"/>
+                <line x1="10" y1="50" x2="20" y2="50" stroke="white" strokeWidth="4.5" strokeLinecap="round"/>
+                <path d="M50,20 L59,50 L50,80 L41,50 Z" stroke="white" strokeWidth="4.5" strokeLinejoin="round"/>
+              </svg>
+              {/* Texto */}
+              <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
+                <span style={{
+                  fontFamily: "'Montserrat', sans-serif",
+                  fontWeight: 600, fontSize: "1.4rem",
+                  color: "#ffffff", letterSpacing: "0.005em",
+                }}>Docka</span>
+                <span style={{
+                  fontFamily: "'Montserrat', sans-serif",
+                  fontWeight: 500, fontSize: "0.62rem",
+                  color: "rgba(255,255,255,0.75)", letterSpacing: "0.2em",
+                  textTransform: "uppercase", marginTop: 1,
+                }}>Seguros</span>
+              </div>
             </Link>
 
             {/* Desktop nav */}
