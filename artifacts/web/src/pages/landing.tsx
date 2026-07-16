@@ -7,14 +7,14 @@ export default function Landing() {
   return (
     <Layout>
 
-      {/* ── HERO ── texto no topo-esquerdo, foto veleiro direita */}
+      {/* ── HERO + BARRA ── juntos preenchem exatamente 100vh, sem sobrar nem faltar */}
+      <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh", marginTop: "-80px" }}>
       <section style={{
         position: "relative",
-        minHeight: "calc(58vh + 80px)",
+        flex: "1 1 auto",
         overflow: "hidden",
         display: "flex",
         alignItems: "flex-start",
-        marginTop: "-80px",
       }}>
         {/* Foto do veleiro */}
         <div style={{
@@ -96,7 +96,7 @@ export default function Landing() {
       </section>
 
       {/* ── BARRA DE DIFERENCIAIS ── fundo navy escuro, 4 colunas */}
-      <section style={{ background: "#0d1b3e", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <section style={{ background: "#0d1b3e", borderTop: "1px solid rgba(255,255,255,0.06)", flexShrink: 0 }}>
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))" }}>
             {[
@@ -138,9 +138,9 @@ export default function Landing() {
               },
             ].map(({ icon, title, desc }, i) => (
               <div key={title} style={{
-                padding: "0.9rem 1.6rem",
+                padding: "0.6rem 1.6rem",
                 borderRight: i < 3 ? "1px solid rgba(255,255,255,0.07)" : "none",
-                display: "flex", flexDirection: "column", gap: 6,
+                display: "flex", flexDirection: "column", gap: 4,
               }}>
                 <div>{icon}</div>
                 <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.68rem", fontWeight: 700, color: "#fff", letterSpacing: "0.12em", textTransform: "uppercase" }}>{title}</div>
@@ -150,6 +150,7 @@ export default function Landing() {
           </div>
         </div>
       </section>
+      </div>
 
       {/* ── SOLUÇÕES ── fundo branco, 6 colunas com ícones SVG */}
       <section id="solucoes" style={{ background: "#fff", padding: "5rem 0" }}>
