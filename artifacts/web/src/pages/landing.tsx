@@ -138,11 +138,11 @@ export default function Landing() {
               },
             ].map(({ icon, title, desc }, i) => (
               <div key={title} style={{
-                padding: "1.2rem 1.6rem",
+                padding: "0.9rem 1.6rem",
                 borderRight: i < 3 ? "1px solid rgba(255,255,255,0.07)" : "none",
-                display: "flex", flexDirection: "column", gap: 10,
+                display: "flex", flexDirection: "column", gap: 6,
               }}>
-                <div style={{ marginBottom: 4 }}>{icon}</div>
+                <div>{icon}</div>
                 <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.68rem", fontWeight: 700, color: "#fff", letterSpacing: "0.12em", textTransform: "uppercase" }}>{title}</div>
                 <div style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.82rem", color: "rgba(255,255,255,0.45)", lineHeight: 1.6 }}>{desc}</div>
               </div>
