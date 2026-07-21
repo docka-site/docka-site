@@ -46,7 +46,7 @@ export default function Landing() {
               margin: 0,
             }}>
               <span style={{ color: "#ffffff", display: "block", fontWeight: 600 }}>CRESÇA</span>
-              <span style={{ color: "var(--tech-green)", display: "block", whiteSpace: "nowrap", fontWeight: 500 }}>COM CONFIANÇA</span>
+              <span style={{ color: "var(--tech-green)", display: "block", fontWeight: 500 }}>COM CONFIANÇA</span>
             </h1>
 
             <p className="animate-fade-up delay-1" style={{
