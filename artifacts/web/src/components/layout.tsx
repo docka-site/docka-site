@@ -1,11 +1,15 @@
 import { ReactNode, useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
+import { FaWhatsapp } from "react-icons/fa";
 
 interface LayoutProps {
   children: ReactNode;
 }
 
 const NAV_H = 80;
+
+// TODO: substituir pelo número real, formato internacional sem espaços/símbolos (ex: "5511987654321")
+const WHATSAPP_NUMBER = "";
 
 const navLinks = [
   { label: "HOME",      href: "/" },
@@ -310,6 +314,37 @@ export function Layout({ children }: LayoutProps) {
           </div>
         </div>
       </footer>
+
+      {/* Botão flutuante do WhatsApp */}
+      <a
+        href={WHATSAPP_NUMBER ? `https://wa.me/${WHATSAPP_NUMBER}` : undefined}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Fale conosco pelo WhatsApp"
+        onClick={e => { if (!WHATSAPP_NUMBER) e.preventDefault(); }}
+        style={{
+          position: "fixed",
+          bottom: 24,
+          right: 24,
+          zIndex: 100,
+          width: 56,
+          height: 56,
+          borderRadius: "50%",
+          background: "#25D366",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          boxShadow: "0 4px 16px rgba(0,0,0,0.3)",
+          textDecoration: "none",
+          cursor: WHATSAPP_NUMBER ? "pointer" : "default",
+          opacity: WHATSAPP_NUMBER ? 1 : 0.55,
+          transition: "transform 0.2s ease",
+        }}
+        onMouseEnter={e => { if (WHATSAPP_NUMBER) e.currentTarget.style.transform = "scale(1.08)"; }}
+        onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; }}
+      >
+        <FaWhatsapp size={30} color="#fff" />
+      </a>
     </div>
   );
 }
