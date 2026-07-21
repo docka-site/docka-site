@@ -106,7 +106,7 @@ export default function Analise() {
       {/* FORMULÁRIO */}
       <section className="bg-cream-50 py-20">
         <div style={{ maxWidth: "72rem", margin: "0 auto", padding: "0 1.5rem" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "2fr 3fr", gap: "4rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "4rem" }}>
             <div className="fade-in">
               <span className="section-label">Solicitar análise</span>
               <h2 className="font-display" style={{ fontSize: "2rem", fontWeight: 400, color: "var(--navy-800)", margin: "8px 0 16px" }}>
@@ -137,7 +137,7 @@ export default function Analise() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} style={{ background: "#fff", border: "1px solid var(--cream-200)", borderRadius: 10, padding: 36 }}>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 20 }}>
                     <div>
                       <label className="form-label" htmlFor="nome">Nome *</label>
                       <input className="form-input" type="text" id="nome" name="nome" required placeholder="Seu nome" value={form.nome} onChange={handleChange} />
@@ -148,7 +148,7 @@ export default function Analise() {
                     </div>
                   </div>
 
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginTop: 20 }}>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 20, marginTop: 20 }}>
                     <div>
                       <label className="form-label" htmlFor="cargo">Cargo</label>
                       <input className="form-input" type="text" id="cargo" name="cargo" placeholder="Ex: CEO, CFO" value={form.cargo} onChange={handleChange} />

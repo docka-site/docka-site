@@ -36,6 +36,14 @@ export function Layout({ children }: LayoutProps) {
 
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+      <style>{`
+        .docka-nav-desktop { display: flex; }
+        .docka-nav-mobile-btn { display: none; }
+        @media (max-width: 767px) {
+          .docka-nav-desktop { display: none !important; }
+          .docka-nav-mobile-btn { display: flex !important; }
+        }
+      `}</style>
 
       {/* ── Navbar fixa — transparente no topo, solid ao rolar ── */}
       <nav id="navbar" style={{
@@ -77,7 +85,7 @@ export function Layout({ children }: LayoutProps) {
             </Link>
 
             {/* Desktop nav */}
-            <div style={{ display: "flex", alignItems: "center", gap: "1.75rem" }} className="hidden md:flex">
+            <div style={{ alignItems: "center", gap: "1.75rem" }} className="docka-nav-desktop">
               {/* HOME */}
               <Link href="/" className={`nav-link${location === "/" ? " active" : ""}`}>HOME</Link>
 
@@ -161,9 +169,9 @@ export function Layout({ children }: LayoutProps) {
 
             {/* Mobile menu btn */}
             <button
-              className="md:hidden"
+              className="docka-nav-mobile-btn"
               onClick={() => setMobileOpen(v => !v)}
-              style={{ background: "none", border: "none", cursor: "pointer", color: "#fff", padding: 4 }}
+              style={{ background: "none", border: "none", cursor: "pointer", color: "#fff", padding: 4, alignItems: "center" }}
             >
               <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 {mobileOpen
