@@ -106,7 +106,7 @@ export default function Analise() {
       {/* FORMULÁRIO */}
       <section className="bg-cream-50 py-20">
         <div style={{ maxWidth: "72rem", margin: "0 auto", padding: "0 1.5rem" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "4rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(280px,100%), 1fr))", gap: "4rem" }}>
             <div className="fade-in">
               <span className="section-label">Solicitar análise</span>
               <h2 className="font-display" style={{ fontSize: "2rem", fontWeight: 400, color: "var(--navy-800)", margin: "8px 0 16px" }}>

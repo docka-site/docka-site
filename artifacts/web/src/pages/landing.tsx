@@ -254,7 +254,7 @@ export default function Landing() {
             </h2>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: 24 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(260px,100%),1fr))", gap: 24 }}>
             {[
               { title: "Expertise atuarial", desc: "Lemos cada apólice linha por linha. Exclusões, sub-limites, franquias — identificamos o que realmente importa antes de recomendar qualquer cobertura.", dark: false },
               { title: "Especialistas em fintechs", desc: "Conhecemos os riscos específicos do setor — exigências de investidores, LGPD, compliance com Banco Central. Sua cobertura é estruturada para o seu contexto.", dark: true },
@@ -284,7 +284,7 @@ export default function Landing() {
           <div style={{ width: "100%", height: "100%", backgroundImage: `url('${SAILBOAT_PHOTO}')`, backgroundSize: "cover", backgroundPosition: "center left" }} />
         </div>
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 2rem", position: "relative", zIndex: 1 }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "4rem", alignItems: "center" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(300px,100%), 1fr))", gap: "4rem", alignItems: "center" }}>
             <div className="fade-in">
               <span className="section-label">Oferta para novas empresas</span>
               <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: "clamp(1.8rem,3.5vw,2.8rem)", color: "#fff", lineHeight: 1.1, margin: "8px 0 0", textTransform: "uppercase" }}>
@@ -334,7 +334,7 @@ export default function Landing() {
       {/* ── EDUARDO ── */}
       <section style={{ background: "var(--navy-800)", padding: "5rem 0" }}>
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 2rem" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "4rem", alignItems: "flex-start" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(260px, 100%), 1fr))", gap: "4rem", alignItems: "flex-start" }}>
             <div className="fade-in">
               <span className="section-label">Quem está por trás</span>
               <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: "clamp(1.6rem,3vw,2.2rem)", color: "#fff", margin: "8px 0 0" }}>Eduardo Andrade</h2>

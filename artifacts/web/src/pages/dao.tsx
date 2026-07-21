@@ -31,7 +31,7 @@ export default function Dao() {
       {/* O QUE É D&O */}
       <section style={{ background: "var(--cream-100)", padding: "5rem 0" }}>
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 2rem" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "4rem", alignItems: "flex-start" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))", gap: "4rem", alignItems: "flex-start" }}>
             <div className="fade-in">
               <span className="section-label">O que é</span>
               <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(1.4rem,2.5vw,1.9rem)", fontWeight: 700, color: "var(--navy-800)", margin: "8px 0 16px" }}>
@@ -89,7 +89,7 @@ export default function Dao() {
               </div>
             ))}
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: 20, marginTop: 20 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(260px,100%),1fr))", gap: 20, marginTop: 20 }}>
             {[
               { t: "Despesas de defesa", d: "Honorários advocatícios, custas processuais e despesas com investigação — pagas antecipadamente, sem aguardar desfecho." },
               { t: "Investigações regulatórias", d: "Custos de resposta a inquéritos e investigações formais de reguladores, mesmo sem processo judicial aberto." },
@@ -106,7 +106,7 @@ export default function Dao() {
       {/* EXCLUSÕES */}
       <section style={{ background: "var(--navy-900)", padding: "5rem 0" }}>
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 2rem" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "4rem", alignItems: "flex-start" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))", gap: "4rem", alignItems: "flex-start" }}>
             <div className="fade-in">
               <span className="section-label">O que o olhar técnico revela</span>
               <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(1.4rem,2.5vw,1.9rem)", fontWeight: 700, color: "#fff", margin: "8px 0 16px" }}>

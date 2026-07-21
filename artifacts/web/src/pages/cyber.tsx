@@ -31,7 +31,7 @@ export default function Cyber() {
       {/* POR QUE FINTECHS PRECISAM */}
       <section style={{ background: "var(--cream-100)", padding: "5rem 0" }}>
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 2rem" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "4rem", alignItems: "flex-start" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))", gap: "4rem", alignItems: "flex-start" }}>
             <div className="fade-in">
               <span className="section-label">Por que fintechs são expostas</span>
               <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(1.4rem,2.5vw,1.9rem)", fontWeight: 700, color: "var(--navy-800)", margin: "8px 0 16px" }}>
@@ -81,7 +81,7 @@ export default function Cyber() {
               Dois blocos que precisam trabalhar juntos
             </h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 24, marginBottom: 24 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(280px,100%),1fr))", gap: 24, marginBottom: 24 }}>
             <div className="card fade-in" style={{ padding: 32, background: "var(--navy-800)", border: "none" }}>
               <div style={{ fontSize: "0.68rem", fontWeight: 700, color: "var(--tech-green)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 14, fontFamily: "'Montserrat', sans-serif" }}>O que sua empresa paga diretamente (First-party)</div>
               <h4 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#fff", margin: "0 0 12px", fontFamily: "'Montserrat', sans-serif" }}>Custos que a empresa absorve diretamente</h4>
@@ -111,7 +111,7 @@ export default function Cyber() {
       {/* EXCLUSÕES */}
       <section style={{ background: "var(--navy-900)", padding: "5rem 0" }}>
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 2rem" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "4rem", alignItems: "flex-start" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))", gap: "4rem", alignItems: "flex-start" }}>
             <div className="fade-in">
               <span className="section-label">Onde estão os riscos ocultos</span>
               <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(1.4rem,2.5vw,1.9rem)", fontWeight: 700, color: "#fff", margin: "8px 0 16px" }}>

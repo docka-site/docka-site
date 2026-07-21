@@ -244,7 +244,7 @@ export function Layout({ children }: LayoutProps) {
       {/* ── Footer ── */}
       <footer id="footer" style={{ background: "var(--navy-950)", color: "rgba(255,255,255,0.5)" }}>
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "4rem 2rem" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: "2rem", paddingBottom: "2.5rem", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "2rem", paddingBottom: "2.5rem", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
             <div>
               <div style={{ marginBottom: "1.25rem" }}>
                 <img

@@ -26,7 +26,7 @@ export default function Sobre() {
       {/* BIO */}
       <section style={{ background: "var(--cream-100)", padding: "5rem 0" }}>
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 2rem" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "4rem" }} className="fade-in">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))", gap: "4rem" }} className="fade-in">
             <div>
               <span className="section-label">Trajetória</span>
               <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(1.4rem,2.5vw,1.9rem)", fontWeight: 700, color: "var(--navy-800)", margin: "8px 0 24px" }}>
