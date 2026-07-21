@@ -39,7 +39,7 @@ export default function Analise() {
               Análise técnica<br /><em>gratuita para<br />sua empresa</em>
             </h1>
             <p className="animate-fade-up delay-1" style={{ opacity: 0, color: "rgba(255,255,255,0.6)", fontSize: "1rem", lineHeight: 1.7, margin: "20px 0 0", maxWidth: 480 }}>
-              Eduardo analisa seu programa de seguros RC Diretores e Riscos Cibernéticos com profundidade atuarial —
+              Nossa equipe analisa seu programa de seguros RC Diretores e Riscos Cibernéticos com profundidade atuarial —
               exclusões, gaps, benchmarks. Relatório técnico em 3 a 4 dias e reunião de apresentação.
             </p>
           </div>
@@ -62,8 +62,8 @@ export default function Analise() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 24, marginBottom: 64 }}>
             {[
               { n: "01", t: "Você preenche o formulário",    c: "var(--navy-800)", tc: "#fff", pc: "rgba(255,255,255,0.5)",
-                d: "Dados básicos da empresa e situação atual de seguros. Eduardo entra em contato em até 24 horas para alinhar os próximos passos." },
-              { n: "02", t: "Eduardo faz a análise técnica", c: "var(--cream-50)",  tc: "var(--navy-800)", pc: "rgba(13,31,78,0.6)",
+                d: "Dados básicos da empresa e situação atual de seguros. Nossa equipe entra em contato em até 24 horas para alinhar os próximos passos." },
+              { n: "02", t: "Nossa equipe faz a análise técnica", c: "var(--cream-50)",  tc: "var(--navy-800)", pc: "rgba(13,31,78,0.6)",
                 d: "Revisão linha por linha das apólices atuais (ou mapeamento do que você precisa, se ainda não tiver). Prazo de 3 a 4 dias úteis." },
               { n: "03", t: "Reunião de apresentação",       c: "var(--cream-50)",  tc: "var(--navy-800)", pc: "rgba(13,31,78,0.6)",
                 d: "60 minutos discutindo os achados: o que está bom, o que está em risco, e recomendações técnicas. Você decide o que fazer." },
@@ -110,7 +110,7 @@ export default function Analise() {
             <div className="fade-in">
               <span className="section-label">Solicitar análise</span>
               <h2 className="font-display" style={{ fontSize: "2rem", fontWeight: 400, color: "var(--navy-800)", margin: "8px 0 16px" }}>
-                Preencha e Eduardo entrará em contato
+                Preencha e nossa equipe entrará em contato
               </h2>
               <p style={{ fontSize: "0.88rem", color: "rgba(13,31,78,0.6)", lineHeight: 1.7, margin: "0 0 24px" }}>
                 Resposta em até 24 horas úteis para confirmar o recebimento e alinhar os próximos passos.
@@ -132,7 +132,7 @@ export default function Analise() {
                   <div style={{ fontSize: "3rem", marginBottom: 16 }}>✓</div>
                   <h3 className="font-display" style={{ fontSize: "1.6rem", color: "var(--navy-800)", marginBottom: 12 }}>Solicitação recebida!</h3>
                   <p style={{ fontSize: "0.9rem", color: "rgba(13,31,78,0.6)", lineHeight: 1.7, maxWidth: 380, margin: "0 auto" }}>
-                    Eduardo entrará em contato em até 24 horas úteis para confirmar o recebimento e alinhar os próximos passos.
+                    Nossa equipe entrará em contato em até 24 horas úteis para confirmar o recebimento e alinhar os próximos passos.
                   </p>
                 </div>
               ) : (

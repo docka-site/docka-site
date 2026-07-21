@@ -94,7 +94,7 @@ export default function Sobre() {
             Quer conversar?
           </h2>
           <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.95rem", lineHeight: 1.7, maxWidth: 460, margin: "0 auto 32px", fontFamily: "'Hind', sans-serif" }}>
-            Solicite a análise técnica gratuita e eu entro em contato em até 24 horas.
+            Solicite a análise técnica gratuita e nossa equipe entra em contato em até 24 horas.
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
             <Link href="/analise" className="btn-gold">Solicitar análise gratuita</Link>
