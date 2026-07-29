@@ -36,11 +36,10 @@ export default function Analise() {
           <div style={{ maxWidth: 640 }}>
             <span className="section-label">Sem custo · Sem compromisso</span>
             <h1 className="font-display animate-fade-up" style={{ opacity: 0, fontSize: "clamp(2.4rem,4.5vw,3.6rem)", fontWeight: 400, color: "#fff", lineHeight: 1.1, margin: "8px 0 0" }}>
-              Análise técnica<br /><em>gratuita para<br />sua empresa</em>
+              Avalie se<br /><em>sua empresa está<br />realmente protegida</em>
             </h1>
             <p className="animate-fade-up delay-1" style={{ opacity: 0, color: "rgba(255,255,255,0.6)", fontSize: "1rem", lineHeight: 1.7, margin: "20px 0 0", maxWidth: 480 }}>
-              Nossa equipe analisa seu programa de seguros RC Diretores e Riscos Cibernéticos com profundidade atuarial —
-              exclusões, gaps, benchmarks. Relatório técnico em 3 a 4 dias e reunião de apresentação.
+              Nossa equipe analisa seu programa de seguros com profundidade, exclusões, gaps e benchmarks. Relatório técnico e reunião de apresentação.
             </p>
           </div>
         </div>
@@ -56,17 +55,16 @@ export default function Analise() {
         <div style={{ maxWidth: "72rem", margin: "0 auto", padding: "0 1.5rem" }}>
           <div className="fade-in" style={{ textAlign: "center", marginBottom: 56 }}>
             <span className="section-label">Como funciona</span>
-            <h2 className="font-display" style={{ fontSize: "2rem", fontWeight: 400, color: "var(--navy-800)", margin: "8px 0 0" }}>Três passos, nenhum custo</h2>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 24, marginBottom: 64 }}>
             {[
-              { n: "01", t: "Você preenche o formulário",    c: "var(--navy-800)", tc: "#fff", pc: "rgba(255,255,255,0.5)",
-                d: "Dados básicos da empresa e situação atual de seguros. Nossa equipe entra em contato em até 24 horas para alinhar os próximos passos." },
+              { n: "01", t: "Levantamento dos Riscos",    c: "var(--navy-800)", tc: "#fff", pc: "rgba(255,255,255,0.5)",
+                d: "Dados da empresa, operação atual e situação atual de seguros." },
               { n: "02", t: "Nossa equipe faz a análise técnica", c: "var(--cream-50)",  tc: "var(--navy-800)", pc: "rgba(13,31,78,0.6)",
-                d: "Revisão linha por linha das apólices atuais (ou mapeamento do que você precisa, se ainda não tiver). Prazo de 3 a 4 dias úteis." },
+                d: "Revisão das apólices atuais (ou mapeamento do que você precisa, se ainda não tiver)" },
               { n: "03", t: "Reunião de apresentação",       c: "var(--cream-50)",  tc: "var(--navy-800)", pc: "rgba(13,31,78,0.6)",
-                d: "60 minutos discutindo os achados: o que está bom, o que está em risco, e recomendações técnicas. Você decide o que fazer." },
+                d: "Apresentação do cenário atual: o que está suficiente, o que está em risco, e recomendações técnicas. Você decide o que fazer." },
             ].map(({ n, t, c, tc, pc, d }) => (
               <div key={n} className="card fade-in" style={{ padding: 32, textAlign: "center", background: c, borderColor: c }}>
                 <div className="font-display" style={{ fontSize: "3rem", fontWeight: 300, color: "var(--gold-500)", lineHeight: 1, marginBottom: 16 }}>{n}</div>
@@ -83,12 +81,10 @@ export default function Analise() {
             </h3>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 16 }}>
               {[
-                "Leitura das coberturas, exclusões, limites e sub-limites",
+                "Apresentação das coberturas, exclusões, limites e sub-limites",
                 "Identificação de gaps de cobertura e riscos não cobertos",
-                "Comparação com benchmarks de fintechs similares",
+                "Comparação com benchmarks de empresa similares",
                 "Avaliação frente a exigências típicas de investidores",
-                "Relatório técnico em PDF (8 a 12 páginas)",
-                "Reunião de 60 min para discutir os achados",
               ].map(d => (
                 <div key={d} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
                   <div style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--gold-400)", flexShrink: 0, marginTop: 6 }}></div>
@@ -112,10 +108,7 @@ export default function Analise() {
               <h2 className="font-display" style={{ fontSize: "2rem", fontWeight: 400, color: "var(--navy-800)", margin: "8px 0 16px" }}>
                 Preencha e nossa equipe entrará em contato
               </h2>
-              <p style={{ fontSize: "0.88rem", color: "rgba(13,31,78,0.6)", lineHeight: 1.7, margin: "0 0 24px" }}>
-                Resposta em até 24 horas úteis para confirmar o recebimento e alinhar os próximos passos.
-              </p>
-              <div style={{ padding: 20, background: "var(--cream-100)", borderRadius: 8, border: "1px solid var(--cream-200)" }}>
+              <div style={{ padding: 20, background: "var(--cream-100)", borderRadius: 8, border: "1px solid var(--cream-200)", marginTop: 16 }}>
                 <div style={{ fontSize: "0.78rem", fontWeight: 600, color: "var(--navy-800)", marginBottom: 4 }}>Preferência de contato direto?</div>
                 <a href="mailto:contato@dockaseguros.com.br" style={{ fontSize: "0.85rem", color: "var(--navy-800)", textDecoration: "none", display: "flex", alignItems: "center", gap: 8, marginTop: 6 }}>
                   <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
@@ -197,7 +190,7 @@ export default function Analise() {
 
                   <button type="submit" className="btn-gold" disabled={status === "sending"}
                     style={{ width: "100%", marginTop: 24, padding: 16, justifyContent: "center" }}>
-                    {status === "sending" ? "Enviando..." : "Solicitar análise gratuita"}
+                    {status === "sending" ? "Enviando..." : "Avalie se sua empresa está realmente protegida"}
                   </button>
                 </form>
               )}

@@ -58,7 +58,7 @@ export default function Landing() {
               maxWidth: 420,
               fontFamily: "'Hind', sans-serif",
             }}>
-              Proteção e gestão de riscos para startups, fintechs e empresas de tecnologia que estão construindo o futuro.
+              Proteção e gestão de riscos corporativos para empresas e líderes que constroem o futuro.
             </p>
 
             <div className="animate-fade-up delay-2" style={{ opacity: 0, marginTop: 28 }}>
@@ -169,14 +169,14 @@ export default function Landing() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 32 }}>
             {[
               {
-                href: "/cyber",
+                href: "/eo",
                 icon: (
                   <svg width="40" height="40" fill="none" stroke="var(--navy-700)" strokeWidth="1.2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
                   </svg>
                 ),
-                name: "RISCOS CIBERNÉTICOS",
-                desc: "Proteção contra ameaças digitais e vazamento de dados.",
+                name: "RC PROFISSIONAL",
+                desc: "Cobertura para falhas, erros e omissões.",
               },
               {
                 href: "/dao",
@@ -189,14 +189,14 @@ export default function Landing() {
                 desc: "Proteção para diretores e executivos.",
               },
               {
-                href: "/eo",
+                href: "/cyber",
                 icon: (
                   <svg width="40" height="40" fill="none" stroke="var(--navy-700)" strokeWidth="1.2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
                   </svg>
                 ),
-                name: "RC PROFISSIONAL",
-                desc: "Cobertura para falhas, erros e omissões.",
+                name: "RISCOS CIBERNÉTICOS",
+                desc: "Proteção contra ameaças digitais e vazamento de dados.",
               },
               {
                 href: "/eo",
@@ -289,11 +289,10 @@ export default function Landing() {
               <span className="section-label">Oferta para novas empresas</span>
               <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: "clamp(1.8rem,3.5vw,2.8rem)", color: "#fff", lineHeight: 1.1, margin: "8px 0 0", textTransform: "uppercase" }}>
                 DIAGNÓSTICO<br />
-                <span style={{ color: "var(--tech-green)" }}>GRATUITO</span><br />
                 PARA SUA EMPRESA
               </h2>
               <p style={{ fontFamily: "'Hind', sans-serif", color: "rgba(255,255,255,0.6)", fontSize: "0.95rem", lineHeight: 1.7, margin: "20px 0 0", maxWidth: 400 }}>
-                Envie suas apólices atuais de RC Diretores e Riscos Cibernéticos. Em 3 a 4 dias, entregamos um relatório técnico completo com gaps de cobertura e benchmarks de mercado.
+                Analisamos suas coberturas atuais e entregamos um relatório técnico completo com gaps de cobertura e benchmarks de mercado.
               </p>
               <Link href="/analise" style={{
                 display: "inline-flex", alignItems: "center", gap: 10, marginTop: 28,
@@ -317,11 +316,11 @@ export default function Landing() {
               <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.85rem", fontWeight: 700, color: "var(--tech-green)", letterSpacing: "0.1em", textTransform: "uppercase", margin: "0 0 20px" }}>O diagnóstico inclui</h3>
               <ul className="check-list">
                 {[
-                  { t: "Leitura linha por linha",            s: "Coberturas, exclusões, limites, sub-limites e franquias" },
+                  { t: "Análise de cobertura",            s: "Coberturas, exclusões, limites, sub-limites e franquias" },
                   { t: "Gaps de cobertura identificados",    s: "Riscos não cobertos que deveriam estar na apólice" },
                   { t: "Benchmark de mercado",               s: "Comparação com coberturas típicas de fintechs similares" },
-                  { t: "Exigências de investidores",         s: "Conformidade com o que VCs e fundos exigem" },
-                  { t: "Relatório PDF + reunião de 60 min",  s: "Documento técnico e apresentação remota ou presencial" },
+                  { t: "Exigências de investidores",         s: "Conformidade regulatória" },
+                  { t: "Relatório técnico",  s: "Documento técnico e apresentação remota ou presencial" },
                 ].map(({ t, s }) => (
                   <li key={t}><span className="dot" /><div><strong style={{ color: "#fff", fontSize: "0.875rem" }}>{t}</strong><div style={{ fontSize: "0.8rem", marginTop: 2 }}>{s}</div></div></li>
                 ))}
@@ -340,10 +339,10 @@ export default function Landing() {
               <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: "clamp(1.6rem,3vw,2.2rem)", color: "#fff", margin: "8px 0 0" }}>Eduardo Andrade</h2>
               <div className="gold-rule" />
               <p style={{ fontFamily: "'Hind', sans-serif", color: "rgba(255,255,255,0.6)", fontSize: "0.95rem", lineHeight: 1.75, margin: "0 0 16px" }}>
-                15 anos como atuário analisando riscos corporativos complexos — D&amp;O, Cyber, E&amp;O, RC. Passou pela AIG e pela Justos Seguros antes de fundar a Docka.
+                Depois de 15 anos avaliando os maiores riscos corporativos do mercado, percebemos que muitas empresas estavam protegidas apenas no papel.
               </p>
               <p style={{ fontFamily: "'Hind', sans-serif", color: "rgba(255,255,255,0.6)", fontSize: "0.95rem", lineHeight: 1.75, margin: 0 }}>
-                A Docka nasceu de uma observação direta: fintechs contratam seguros para atender investidores, mas sem análise técnica real. O resultado são apólices com exclusões críticas que só aparecem na hora do sinistro.
+                Foi por isso que nasceu a Docka Seguros: para transformar seguros em estratégia de proteção patrimonial.
               </p>
               <Link href="/sobre" style={{ display: "inline-block", marginTop: 28, color: "var(--tech-green)", fontSize: "0.875rem", fontWeight: 500, textDecoration: "none", fontFamily: "'Hind', sans-serif" }}>
                 Ler trajetória completa →

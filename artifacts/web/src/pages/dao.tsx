@@ -115,7 +115,7 @@ export default function Dao() {
               <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.92rem", lineHeight: 1.75, margin: "0 0 24px", fontFamily: "'Hind', sans-serif" }}>
                 A maioria das empresas só descobre essas exclusões quando tenta acionar o seguro. Nossa análise técnica identifica esses pontos antes — enquanto ainda há tempo de corrigir.
               </p>
-              <Link href="/analise" className="btn-gold">Solicitar análise gratuita</Link>
+              <Link href="/analise" className="btn-gold">Avalie se sua empresa está realmente protegida</Link>
             </div>
             <div className="fade-in">
               <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
