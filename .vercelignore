@@ -1,0 +1,20 @@
+# Vercel - não fazer build destes arquivos
+node_modules
+.git
+.gitignore
+*.md
+.env.local
+.env.*.local
+.cache
+.local
+.vscode
+.cursor
+.claude
+
+# Não precisa incluir backend no Vercel (rodando no Railway)
+artifacts/api-server
+packages/backend
+
+# Dependências não usadas
+.pnpm-store
+.turbo
