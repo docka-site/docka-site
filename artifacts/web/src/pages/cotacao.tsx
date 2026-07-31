@@ -5,7 +5,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { motion } from "framer-motion";
 import { ChevronRight, ArrowLeft, ShieldCheck, AlertCircle, Building, Briefcase, FileText, ChevronDown, Search } from "lucide-react";
-import { useCreateQuote } from "@workspace/api-client-react";
 import { Layout } from "@/components/layout";
 
 // Define the exact enums based on OpenAPI schema
@@ -537,7 +536,6 @@ export default function Cotacao() {
   const emailParams = new URLSearchParams(searchString).get("email");
   
   const [currentStep, setCurrentStep] = useState(1);
-  const createQuoteMutation = useCreateQuote();
 
   const {
     register,
