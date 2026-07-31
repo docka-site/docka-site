@@ -1,25 +1,28 @@
 FROM node:22-alpine
 
-WORKDIR /app
+WORKDIR /app/artifacts/api-server
 
 # Install pnpm
 RUN npm install -g pnpm@latest
 
-# Copy minimal workspace files (no frontend files)
-COPY package.json ./
-COPY pnpm-workspace.yaml ./
-COPY .npmrc ./.npmrc
+# Copy backend files ONLY
+COPY artifacts/api-server/package.json ./
+COPY artifacts/api-server/pnpm-lock.yaml* ./ 2>/dev/null || true
+COPY artifacts/api-server/src ./src
+COPY artifacts/api-server/tsconfig.json ./tsconfig.json 2>/dev/null || true
+COPY artifacts/api-server/build.mjs ./build.mjs 2>/dev/null || true
 
-# Copy ONLY backend and its shared libs
-COPY lib ./lib
-COPY artifacts/api-server ./artifacts/api-server
+# Copy shared libraries
+COPY lib /app/lib
 
-# Install with --optional-dependencies=false to skip platform-specific deps
-WORKDIR /app
-RUN pnpm install --optional-dependencies=false --filter @workspace/api-server 2>&1 | grep -v "ERR_PNPM" || true
+# Set environment to skip problematic dependencies
+ENV PNPM_SKIP_PLATFORM_CHECK=true
+ENV npm_config_platform=linux
+
+# Install dependencies WITHOUT workspace resolution
+RUN pnpm install --frozen-lockfile=false --no-optional 2>&1 | tail -20
 
 # Build backend
-WORKDIR /app/artifacts/api-server
 RUN pnpm build
 
 # Expose port
