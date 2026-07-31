@@ -17,9 +17,6 @@ RUN npm install --production=false --legacy-peer-deps
 # Build backend
 RUN npm run build
 
-# Remove dev dependencies for production
-RUN npm prune --production
-
 # Expose port
 EXPOSE 8082
 
