@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: docka-api
+    env: node
+    region: oregon
+    plan: starter
+
+    buildCommand: cd artifacts/api-server && npm install && npm run build
+    startCommand: cd artifacts/api-server && npm start
+
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8082
+
+    autoDeploy: true
