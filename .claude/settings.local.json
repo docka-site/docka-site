@@ -9,7 +9,12 @@
       "Bash(tail -50 /tmp/vite-dev.log)",
       "PowerShell(winget install -e --id PostgreSQL.PostgreSQL.17 --accept-package-agreements --accept-source-agreements)",
       "Bash(curl -s http://localhost:8082/api/health)",
-      "Bash(curl -s http://localhost:8082/api/leads -X POST -H \"Content-Type: application/json\" -d '{\"email\":\"teste@teste.com\"}')"
+      "Bash(curl -s http://localhost:8082/api/leads -X POST -H \"Content-Type: application/json\" -d '{\"email\":\"teste@teste.com\"}')",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Add Dockerfile for Railway deployment *)",
+      "Bash(git push *)",
+      "Bash(git commit -m 'Fix Dockerfile to use pnpm filter for backend only *)",
+      "Bash(git commit -m 'Add .pnpmfile.cjs to filter platform-specific binaries *)"
     ]
   }
 }
