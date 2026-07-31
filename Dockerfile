@@ -7,20 +7,18 @@ RUN npm install -g pnpm@latest
 
 # Copy workspace root files
 COPY pnpm-workspace.yaml package.json .npmrc* ./
+COPY build.sh ./
 
-# Copy backend only
+# Copy backend and libraries
 COPY artifacts/api-server ./artifacts/api-server
 COPY lib ./lib
 
-# Install dependencies (all workspace packages, but we'll only run backend)
-RUN pnpm install --frozen-lockfile=false
-
-# Build backend
-WORKDIR /app/artifacts/api-server
-RUN pnpm build
+# Make build script executable and run it
+RUN chmod +x build.sh && ./build.sh
 
 # Expose port
 EXPOSE 8082
 
 # Start backend
+WORKDIR /app/artifacts/api-server
 CMD ["pnpm", "start"]
