@@ -2,7 +2,10 @@ FROM node:22-alpine
 
 WORKDIR /app
 
-# Copy backend files ONLY (no workspace)
+# Copy workspace libs FIRST (needed by backend build)
+COPY lib ./lib
+
+# Copy backend files
 COPY artifacts/api-server/package.json ./package.json
 COPY artifacts/api-server/src ./src
 COPY artifacts/api-server/tsconfig.json ./tsconfig.json

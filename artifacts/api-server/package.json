@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@google-cloud/storage": "^7.19.0",
+    "@workspace/api-zod": "file:./lib/api-zod",
+    "@workspace/db": "file:./lib/db",
     "cookie-parser": "^1.4.7",
     "cors": "^2",
     "drizzle-orm": "^0.45.1",
@@ -18,8 +20,7 @@
     "google-auth-library": "^10.6.2",
     "pino": "^9",
     "pino-http": "^10",
-    "resend": "4.0.0",
-    "zod": "3.25.76"
+    "resend": "4.0.0"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.10",
