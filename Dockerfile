@@ -9,7 +9,7 @@ COPY artifacts/api-server/tsconfig.json ./tsconfig.json
 COPY artifacts/api-server/build.mjs ./build.mjs
 
 # Install dependencies using plain npm (no pnpm, no workspace)
-RUN npm install --production=false
+RUN npm install --production=false --legacy-peer-deps
 
 # Build backend
 RUN npm run build
