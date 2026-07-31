@@ -2,23 +2,23 @@ FROM node:22-alpine
 
 WORKDIR /app
 
-# Install pnpm
-RUN npm install -g pnpm@latest
+# Copy ONLY backend package.json
+COPY artifacts/api-server/package.json artifacts/api-server/package.json
+COPY artifacts/api-server/package-lock.json artifacts/api-server/package-lock.json 2>/dev/null || true
 
-# Copy workspace root files
-COPY pnpm-workspace.yaml package.json .npmrc* ./
-COPY build.sh ./
+# Copy source code
+COPY artifacts/api-server/src ./artifacts/api-server/src
+COPY artifacts/api-server/tsconfig.json ./artifacts/api-server/tsconfig.json 2>/dev/null || true
 
-# Copy backend and libraries
-COPY artifacts/api-server ./artifacts/api-server
-COPY lib ./lib
+# Install dependencies using npm (not pnpm, to avoid workspace issues)
+WORKDIR /app/artifacts/api-server
+RUN npm install --omit=dev
 
-# Make build script executable and run it
-RUN chmod +x build.sh && ./build.sh
+# Build
+RUN npm run build || npx tsc
 
 # Expose port
 EXPOSE 8082
 
-# Start backend
-WORKDIR /app/artifacts/api-server
-CMD ["pnpm", "start"]
+# Start
+CMD ["npm", "start"]
