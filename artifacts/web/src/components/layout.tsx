@@ -8,8 +8,7 @@ interface LayoutProps {
 
 const NAV_H = 80;
 
-// TODO: substituir pelo número real, formato internacional sem espaços/símbolos (ex: "5511987654321")
-const WHATSAPP_NUMBER = "";
+const WHATSAPP_NUMBER = "5511970266111";
 
 const navLinks = [
   { label: "HOME",      href: "/" },
