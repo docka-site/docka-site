@@ -9,6 +9,7 @@ import Landing from "@/pages/landing";
 import Dao from "@/pages/dao";
 import Cyber from "@/pages/cyber";
 import Eo from "@/pages/eo";
+import Embedded from "@/pages/embedded";
 import Sobre from "@/pages/sobre";
 import Analise from "@/pages/analise";
 import Cotacao from "@/pages/cotacao";
@@ -50,6 +51,7 @@ function Router() {
       <Route path="/dao" component={Dao} />
       <Route path="/cyber" component={Cyber} />
       <Route path="/eo" component={Eo} />
+      <Route path="/embedded" component={Embedded} />
       <Route path="/sobre" component={Sobre} />
       <Route path="/analise" component={Analise} />
       <Route path="/cotacao" component={Cotacao} />
