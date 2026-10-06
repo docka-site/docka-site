@@ -304,18 +304,18 @@ export default function Landing() {
             {COPY.education.items.map((item, index) => {
               const icons = [
                 // Calendário - Para Retroatividade (tempo/histórico)
-                <svg key="calendar" width="32" height="32" fill="none" stroke="var(--tech-green)" strokeWidth="1.5" viewBox="0 0 24 24">
+                <svg key="calendar" width="32" height="32" fill="none" stroke="#fff" strokeWidth="1.5" viewBox="0 0 24 24">
                   <rect x="3" y="4" width="18" height="18" rx="2"/>
                   <path d="M16 2v4M8 2v4"/>
                   <line x1="3" y1="10" x2="21" y2="10"/>
                 </svg>,
                 // Escudo com Checkmark - Para Limite Adequado (proteção confirmada)
-                <svg key="shield" width="32" height="32" fill="none" stroke="var(--tech-green)" strokeWidth="1.5" viewBox="0 0 24 24">
+                <svg key="shield" width="32" height="32" fill="none" stroke="#fff" strokeWidth="1.5" viewBox="0 0 24 24">
                   <path d="M12 22s-8-4-8-10V5l8-3 8 3v7c0 6-8 10-8 10z"/>
                   <polyline points="9 12 11 14 15 10" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>,
                 // Dois Escudos - Para RC Prof ≠ Cyber (comparação/diferença)
-                <svg key="compare" width="32" height="32" fill="none" stroke="var(--tech-green)" strokeWidth="1.5" viewBox="0 0 24 24">
+                <svg key="compare" width="32" height="32" fill="none" stroke="#fff" strokeWidth="1.5" viewBox="0 0 24 24">
                   <path d="M12 22s-5-3-5-7V6l5-2.5 5 2.5v9c0 4-5 7-5 7z"/>
                   <path d="M12 22s5-3 5-7V6l-5-2.5L7 6v9c0 4 5 7 5 7z" opacity="0.5"/>
                 </svg>,
