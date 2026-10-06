@@ -286,8 +286,8 @@ export default function Landing() {
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 28 }}>
-            {COPY.howItWorks.steps.map((step) => (
-              <div key={step.number} className="fade-in" style={{ textAlign: "center" }}>
+            {COPY.howItWorks.items.map((item) => (
+              <div key={item.step} className="fade-in" style={{ textAlign: "center" }}>
                 <div
                   style={{
                     width: 60,
@@ -304,13 +304,13 @@ export default function Landing() {
                     color: "#0d1b3e",
                   }}
                 >
-                  {step.number}
+                  {item.step}
                 </div>
                 <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "1rem", fontWeight: 700, color: "#fff", margin: "0 0 10px" }}>
-                  {step.title}
+                  {item.title}
                 </h3>
                 <p style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.7, margin: 0 }}>
-                  {step.description}
+                  {item.desc}
                 </p>
               </div>
             ))}
@@ -382,10 +382,10 @@ export default function Landing() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 32 }}>
             <div className="fade-in" style={{ background: "var(--cream-100)", border: "1px solid var(--cream-200)", borderRadius: 8, padding: 32 }}>
               <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "1.2rem", fontWeight: 700, color: "var(--navy-800)", margin: "0 0 12px" }}>
-                {COPY.partners.professional.title}
+                {COPY.partners.protect.title}
               </h3>
               <p style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.95rem", color: "rgba(13,31,78,0.6)", lineHeight: 1.7, margin: "0 0 20px" }}>
-                {COPY.partners.professional.description}
+                {COPY.partners.protect.desc}
               </p>
               <button
                 onClick={scrollToForm}
@@ -413,16 +413,16 @@ export default function Landing() {
                   (e.currentTarget as HTMLButtonElement).style.background = "var(--tech-green)";
                 }}
               >
-                {COPY.partners.professional.cta}
+                {COPY.partners.protect.cta}
               </button>
             </div>
 
             <div className="fade-in" style={{ background: "var(--navy-800)", border: "1px solid var(--navy-800)", borderRadius: 8, padding: 32 }}>
               <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "1.2rem", fontWeight: 700, color: "#fff", margin: "0 0 12px" }}>
-                {COPY.partners.partnership.title}
+                {COPY.partners.partner.title}
               </h3>
               <p style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.7, margin: "0 0 20px" }}>
-                {COPY.partners.partnership.description}
+                {COPY.partners.partner.desc}
               </p>
               <Link
                 href="/parceiros"
@@ -449,7 +449,7 @@ export default function Landing() {
                   (e.currentTarget as HTMLAnchorElement).style.background = "var(--tech-green)";
                 }}
               >
-                {COPY.partners.partnership.cta}
+                {COPY.partners.partner.cta}
               </Link>
             </div>
           </div>
@@ -480,7 +480,7 @@ export default function Landing() {
                       userSelect: "none",
                     }}
                   >
-                    {item.question}
+                    {item.q}
                   </summary>
                   <p
                     style={{
@@ -491,7 +491,7 @@ export default function Landing() {
                       margin: "12px 0 0",
                     }}
                   >
-                    {item.answer}
+                    {item.a}
                   </p>
                 </details>
               </div>
