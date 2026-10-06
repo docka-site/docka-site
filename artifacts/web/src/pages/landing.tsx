@@ -286,7 +286,7 @@ export default function Landing() {
                   {item.title}
                 </h3>
                 <p style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.875rem", color: "rgba(13,31,78,0.6)", lineHeight: 1.7, margin: 0 }}>
-                  {item.description}
+                  {item.desc}
                 </p>
               </div>
             ))}
