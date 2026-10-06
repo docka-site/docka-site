@@ -51,13 +51,14 @@ export default function Landing() {
                   fontWeight: 800,
                   fontSize: "clamp(2.4rem, 4.8vw, 4rem)",
                   lineHeight: 1.0,
-                  textTransform: "none",
+                  textTransform: "uppercase",
                   letterSpacing: "-0.01em",
                   margin: 0,
+                  color: "#ffffff",
                 }}
               >
-                <span style={{ color: "#ffffff", display: "block" }}>{COPY.hero.title}</span>
-                <span style={{ color: "var(--tech-green)", display: "block" }}>{COPY.hero.titleHighlight}</span>
+                <span style={{ color: "#ffffff", display: "block", fontWeight: 600 }}>REDUZINDO</span>
+                <span style={{ color: "var(--tech-green)", display: "block", fontWeight: 500 }}>PREJUÍZOS E PROTEGENDO SUA REPUTAÇÃO</span>
               </h1>
 
               <p

@@ -1,8 +1,7 @@
 export const COPY = {
   hero: {
-    title: "Reduzindo prejuízos",
-    titleHighlight: "e protegendo sua reputação",
-    subtitle: "Oferecemos análise técnica de RC Profissional para empresas e líderes que construem o futuro.",
+    title: "Reduzindo prejuízos e protegendo sua reputação",
+    subtitle: "Oferecemos proteção em RC Profissional para sua empresa e seus líderes contra reclamações de clientes, custos de defesa, processos judiciais e danos reputacionais. Com especialistas que entendem seu risco, reduzimos sua exposição financeira e garantimos a continuidade do negócio.",
     cta: "Agendar Diagnóstico",
     trustline: "Resposta em até 1 dia útil"
   },
