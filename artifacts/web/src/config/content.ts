@@ -50,7 +50,7 @@ export const COPY = {
         desc: "O limite de cobertura deve ser proporcional aos seus contratos. Um contrato de $500k exige limite mínimo de $500k."
       },
       {
-        title: "RC Prof ≠ Cyber",
+        title: "RC Profissional ≠ RC Cibernético",
         desc: "RC Profissional não cobre ataques cibernéticos. Você precisa de um seguro Cyber separado para essa proteção."
       }
     ]
