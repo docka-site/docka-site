@@ -210,17 +210,23 @@ export default function Landing() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 32 }}>
             {COPY.problem.items.map((item, index) => {
               const icons = [
-                // Balança - Justiça/Processo legal
-                <svg key="justice" width="24" height="24" fill="var(--tech-green)" viewBox="0 0 24 24" style={{ flexShrink: 0 }}>
-                  <path d="M12 1C6.48 1 2 5.48 2 11s4.48 10 10 10 10-4.48 10-10S17.52 1 12 1zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 9 15.5 9 14 9.67 14 10.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 9 8.5 9 7 9.67 7 10.5 7.67 12 8.5 12zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                // Documento - Para custos de defesa legal
+                <svg key="document" width="24" height="24" fill="none" stroke="var(--tech-green)" strokeWidth="1.5" viewBox="0 0 24 24" style={{ flexShrink: 0 }}>
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="12" y1="13" x2="8" y2="13"/>
+                  <line x1="12" y1="17" x2="8" y2="17"/>
                 </svg>,
-                // Checkmark - Conformidade/Requisito
-                <svg key="compliance" width="24" height="24" fill="none" stroke="var(--tech-green)" strokeWidth="2" viewBox="0 0 24 24" style={{ flexShrink: 0 }}>
-                  <polyline points="20 6 9 17 4 12"/>
+                // Escudo com Checkmark - Para conformidade/requisito
+                <svg key="shield-check" width="24" height="24" fill="none" stroke="var(--tech-green)" strokeWidth="1.5" viewBox="0 0 24 24" style={{ flexShrink: 0 }}>
+                  <path d="M12 22s-8-4-8-10V5l8-3 8 3v7c0 6-8 10-8 10z"/>
+                  <polyline points="9 12 11 14 15 10" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>,
-                // Escudo - Proteção
-                <svg key="protection" width="24" height="24" fill="var(--tech-green)" viewBox="0 0 24 24" style={{ flexShrink: 0 }}>
-                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                // Escudo com Alerta - Para proteção inadequada
+                <svg key="shield-alert" width="24" height="24" fill="none" stroke="var(--tech-green)" strokeWidth="1.5" viewBox="0 0 24 24" style={{ flexShrink: 0 }}>
+                  <path d="M12 22s-8-4-8-10V5l8-3 8 3v7c0 6-8 10-8 10z"/>
+                  <line x1="12" y1="8" x2="12" y2="13"/>
+                  <circle cx="12" cy="16" r="1"/>
                 </svg>,
               ];
               return (
