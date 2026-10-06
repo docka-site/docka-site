@@ -355,28 +355,39 @@ export default function Landing() {
           </div>
 
           <div style={{ marginTop: "4rem" }}>
-            {COPY.howItWorks.items.map((item, index) => (
-              <div key={item.step} className="fade-in" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center", marginBottom: index < COPY.howItWorks.items.length - 1 ? "4rem" : 0, gridAutoFlow: index % 2 === 1 ? "dense" : "row" }}>
-                <div style={{ order: index % 2 === 1 ? 2 : 1 }}>
-                  <div style={{ width: 120, height: 120, background: "transparent", border: "3px solid var(--gold-500)", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 24 }}>
-                    <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "3.5rem", fontWeight: 300, color: "var(--gold-500)", lineHeight: 1 }}>
-                      {item.step}
-                    </span>
+            {COPY.howItWorks.items.map((item, index) => {
+              const imageMap: { [key: string]: string } = {
+                "01": `${import.meta.env.BASE_URL}images/process-01-analise.jpg`,
+                "02": `${import.meta.env.BASE_URL}images/process-02-cotacao.jpg`,
+                "03": `${import.meta.env.BASE_URL}images/process-03-recomendacao.jpg`,
+                "04": `${import.meta.env.BASE_URL}images/process-04-contratacao.jpg`,
+                "05": `${import.meta.env.BASE_URL}images/process-05-gestao.jpg`,
+              };
+              return (
+                <div key={item.step} className="fade-in" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center", marginBottom: index < COPY.howItWorks.items.length - 1 ? "4rem" : 0, gridAutoFlow: index % 2 === 1 ? "dense" : "row" }}>
+                  <div style={{ order: index % 2 === 1 ? 2 : 1 }}>
+                    <div style={{ width: 120, height: 120, background: "transparent", border: "3px solid var(--gold-500)", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 24 }}>
+                      <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "3.5rem", fontWeight: 300, color: "var(--gold-500)", lineHeight: 1 }}>
+                        {item.step}
+                      </span>
+                    </div>
+                    <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "var(--gold-500)", margin: "0 0 12px" }}>
+                      {item.title}
+                    </h3>
+                    <p style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.95rem", color: "rgba(13,31,78,0.65)", lineHeight: 1.8, margin: 0 }}>
+                      {item.desc}
+                    </p>
                   </div>
-                  <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "var(--gold-500)", margin: "0 0 12px" }}>
-                    {item.title}
-                  </h3>
-                  <p style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.95rem", color: "rgba(13,31,78,0.65)", lineHeight: 1.8, margin: 0 }}>
-                    {item.desc}
-                  </p>
-                </div>
-                <div style={{ order: index % 2 === 1 ? 1 : 2, background: "var(--cream-100)", borderRadius: 8, height: 320, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <div style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.9rem", color: "rgba(13,31,78,0.4)", textAlign: "center", padding: 32 }}>
-                    [Imagem {item.step}]
+                  <div style={{ order: index % 2 === 1 ? 1 : 2, borderRadius: 8, height: 320, overflow: "hidden" }}>
+                    <img
+                      src={imageMap[item.step]}
+                      alt={item.title}
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    />
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
