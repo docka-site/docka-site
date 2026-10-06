@@ -236,7 +236,7 @@ export default function Landing() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 28 }}>
             {COPY.coverage.items.map((item) => (
               <div
-                key={item.title}
+                key={item.name}
                 className="fade-in"
                 style={{
                   background: "#fff",
@@ -246,10 +246,10 @@ export default function Landing() {
                 }}
               >
                 <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "1rem", fontWeight: 700, color: "var(--navy-800)", margin: "0 0 10px" }}>
-                  {item.title}
+                  {item.name}
                 </h3>
                 <p style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.875rem", color: "rgba(13,31,78,0.6)", lineHeight: 1.7, margin: 0 }}>
-                  {item.description}
+                  {item.desc}
                 </p>
               </div>
             ))}
