@@ -1,8 +1,9 @@
 export const COPY = {
   hero: {
-    title: "Reduzindo prejuízos e protegendo sua reputação",
-    subtitle: "Oferecemos proteção em RC Profissional para sua empresa e seus líderes contra reclamações de clientes, custos de defesa, processos judiciais e danos reputacionais. Com especialistas que entendem seu risco, reduzimos sua exposição financeira e garantimos a continuidade do negócio.",
-    cta: "Solicitar Análise Gratuita",
+    title: "Reduzindo prejuízos",
+    titleHighlight: "e protegendo sua reputação",
+    subtitle: "Oferecemos análise técnica de RC Profissional para empresas e líderes que construem o futuro.",
+    cta: "Agendar Diagnóstico",
     trustline: "Resposta em até 1 dia útil"
   },
 
@@ -144,9 +145,11 @@ export const COPY = {
   },
 
   footer: {
-    company: "Docka Seguros Corretora de Seguros",
-    cnpj: "CNPJ: 65.555.520-06",
-    susep: "SUSEP: 262178938",
+    company: "Docka Seguros",
+    cnpj: "65.555.520/0001-06",
+    susep: "262178938",
+    phone: "11 97026-6111",
+    email: "contato@dockaseguros.com.br",
     privacyPolicy: "Política de Privacidade",
     rights: "Todos os direitos reservados."
   }
