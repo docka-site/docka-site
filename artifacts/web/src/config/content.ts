@@ -58,21 +58,33 @@ export const COPY = {
 
   howItWorks: {
     title: "Como funciona",
+    subtitle: "Nosso processo é estruturado em 5 fases que garantem a cobertura adequada ao seu negócio",
+    intro: "Aqui, você encontra condições mais competitivas e um atendimento ágil e especializado, desde a análise até o acionamento do seguro.",
     items: [
       {
-        step: "1",
-        title: "Você envia",
-        desc: "Informações sobre sua empresa ou sua apólice atual"
+        step: "01",
+        title: "Análise",
+        desc: "Analisados os riscos inerentes ao seu negócio. Isso envolve uma avaliação profunda dos diferentes aspectos do negócio que podem estar expostos a riscos, como gestão de caixa, danos patrimoniais e danos a terceiros. Realizamos um estudo minucioso dos ativos, operações e exposições ao risco, com o objetivo de compreender completamente as necessidades de seguro."
       },
       {
-        step: "2",
-        title: "Docka analisa",
-        desc: "Comparamos opções e identificamos gaps de cobertura"
+        step: "02",
+        title: "Cotação",
+        desc: "Após a análise, é desenvolvido um plano de seguros personalizado. Esse plano é desenhado de forma a cobrir adequadamente os riscos identificados. Os diferentes tipos de seguro são selecionados e customizados de acordo com as necessidades específicas do negócio. O objetivo é garantir uma cobertura abrangente e eficaz contra os riscos relevantes."
       },
       {
-        step: "3",
-        title: "Você recebe",
-        desc: "Recomendação técnica e cotação personalizada"
+        step: "03",
+        title: "Recomendação",
+        desc: "Nesta fase, são realizadas negociações com o mercado segurador para obter as melhores condições de cobertura e preços para os seguros selecionados. Isso envolve comparar as ofertas de diferentes seguradoras, negociar os termos e condições do contrato de seguro e buscar os melhores custos-benefícios para o cliente. O objetivo é garantir que o cliente obtenha a cobertura adequada a um preço competitivo."
+      },
+      {
+        step: "04",
+        title: "Contratação",
+        desc: "Uma vez concluída a fase de negociação, as melhores propostas de seguro são consolidadas e apresentadas ao cliente. Esta apresentação inclui uma análise detalhada das opções disponíveis, destacando os benefícios e as condições de cada oferta. O objetivo é fornecer ao cliente todas as informações necessárias para tomar uma decisão assertiva sobre as coberturas e particularidades de cada modalidade de seguro."
+      },
+      {
+        step: "05",
+        title: "Gestão",
+        desc: "Após a seleção e contratação dos seguros, inicia-se a fase de gestão. Isso envolve a administração das apólices vigentes, incluindo o acompanhamento dos prazos de renovação, o gerenciamento de eventuais alterações nas coberturas e a manutenção de uma comunicação constante com as seguradoras. Garantimos que o cliente mantenha uma cobertura eficaz ao longo do tempo e receba o suporte necessário em caso de necessidade."
       }
     ]
   },

@@ -339,53 +339,44 @@ export default function Landing() {
       </section>
 
       {/* ── 5. COMO FUNCIONA ── */}
-      <section style={{ background: "var(--navy-900)", padding: "5rem 0" }}>
+      <section style={{ background: "#fff", padding: "5rem 0" }}>
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 2rem" }}>
-          <div className="fade-in" style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-            <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: "clamp(1.4rem, 2.5vw, 1.9rem)", color: "#fff", margin: 0 }}>
+          <div className="fade-in" style={{ textAlign: "center", marginBottom: "1rem" }}>
+            <div style={{ display: "inline-block", border: "2px solid var(--gold-500)", borderRadius: "50px", padding: "6px 16px", marginBottom: 24 }}>
+              <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.75rem", fontWeight: 700, color: "var(--gold-500)", letterSpacing: "0.1em", textTransform: "uppercase" }}>NOSSO FORMATO</span>
+            </div>
+            <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: "clamp(1.4rem, 2.5vw, 1.9rem)", color: "var(--navy-800)", margin: "0 0 12px" }}>
               {COPY.howItWorks.title}
             </h2>
-            <div style={{ width: 40, height: 3, background: "var(--tech-green)", margin: "14px auto 0", borderRadius: 2 }} />
-            <p style={{ fontFamily: "'Hind', sans-serif", color: "rgba(255,255,255,0.5)", marginTop: 12, marginBottom: 0 }}>
-              {COPY.howItWorks.subtitle}
+            <div style={{ width: 40, height: 3, background: "var(--tech-green)", margin: "0 auto 20px", borderRadius: 2 }} />
+            <p style={{ fontFamily: "'Hind', sans-serif", color: "rgba(13,31,78,0.65)", marginTop: 0, marginBottom: 0, maxWidth: 700, margin: "0 auto", fontSize: "1rem", lineHeight: 1.7 }}>
+              {COPY.howItWorks.intro}
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 28 }}>
-            {COPY.howItWorks.items.map((item) => (
-              <div key={item.step} className="fade-in" style={{ textAlign: "center" }}>
-                <div
-                  style={{
-                    width: 60,
-                    height: 60,
-                    background: "var(--tech-green)",
-                    borderRadius: "50%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    margin: "0 auto 20px",
-                    fontFamily: "'Montserrat', sans-serif",
-                    fontSize: "1.8rem",
-                    fontWeight: "bold",
-                    color: "#0d1b3e",
-                  }}
-                >
-                  {item.step}
+          <div style={{ marginTop: "4rem" }}>
+            {COPY.howItWorks.items.map((item, index) => (
+              <div key={item.step} className="fade-in" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center", marginBottom: index < COPY.howItWorks.items.length - 1 ? "4rem" : 0, gridAutoFlow: index % 2 === 1 ? "dense" : "row" }}>
+                <div style={{ order: index % 2 === 1 ? 2 : 1 }}>
+                  <div style={{ width: 120, height: 120, background: "transparent", border: "3px solid var(--gold-500)", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 24 }}>
+                    <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "3.5rem", fontWeight: 300, color: "var(--gold-500)", lineHeight: 1 }}>
+                      {item.step}
+                    </span>
+                  </div>
+                  <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "var(--gold-500)", margin: "0 0 12px" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.95rem", color: "rgba(13,31,78,0.65)", lineHeight: 1.8, margin: 0 }}>
+                    {item.desc}
+                  </p>
                 </div>
-                <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "1rem", fontWeight: 700, color: "#fff", margin: "0 0 10px" }}>
-                  {item.title}
-                </h3>
-                <p style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.7, margin: 0 }}>
-                  {item.desc}
-                </p>
+                <div style={{ order: index % 2 === 1 ? 1 : 2, background: "var(--cream-100)", borderRadius: 8, height: 320, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <div style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.9rem", color: "rgba(13,31,78,0.4)", textAlign: "center", padding: 32 }}>
+                    [Imagem {item.step}]
+                  </div>
+                </div>
               </div>
             ))}
-          </div>
-
-          <div style={{ textAlign: "center", marginTop: 32 }}>
-            <p style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.6)", margin: 0 }}>
-              <strong style={{ color: "#fff" }}>{COPY.howItWorks.result}</strong>
-            </p>
           </div>
         </div>
       </section>

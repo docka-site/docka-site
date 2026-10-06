@@ -14,7 +14,8 @@
       "Bash(git commit -m 'Add Dockerfile for Railway deployment *)",
       "Bash(git push *)",
       "Bash(git commit -m 'Fix Dockerfile to use pnpm filter for backend only *)",
-      "Bash(git commit -m 'Add .pnpmfile.cjs to filter platform-specific binaries *)"
+      "Bash(git commit -m 'Add .pnpmfile.cjs to filter platform-specific binaries *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
