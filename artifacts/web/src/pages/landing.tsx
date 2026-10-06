@@ -301,19 +301,39 @@ export default function Landing() {
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 28 }}>
-            {COPY.education.items.map((item) => (
-              <div key={item.title} className="fade-in" style={{ padding: "1.5rem" }}>
-                <div style={{ width: 50, height: 50, background: "var(--tech-green)", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20 }}>
-                  <span style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#fff" }}>!</span>
+            {COPY.education.items.map((item, index) => {
+              const icons = [
+                // Calendário - Para Retroatividade (tempo/histórico)
+                <svg key="calendar" width="32" height="32" fill="none" stroke="var(--tech-green)" strokeWidth="1.5" viewBox="0 0 24 24">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <path d="M16 2v4M8 2v4"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>,
+                // Escudo com Checkmark - Para Limite Adequado (proteção confirmada)
+                <svg key="shield" width="32" height="32" fill="none" stroke="var(--tech-green)" strokeWidth="1.5" viewBox="0 0 24 24">
+                  <path d="M12 22s-8-4-8-10V5l8-3 8 3v7c0 6-8 10-8 10z"/>
+                  <polyline points="9 12 11 14 15 10" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>,
+                // Dois Escudos - Para RC Prof ≠ Cyber (comparação/diferença)
+                <svg key="compare" width="32" height="32" fill="none" stroke="var(--tech-green)" strokeWidth="1.5" viewBox="0 0 24 24">
+                  <path d="M12 22s-5-3-5-7V6l5-2.5 5 2.5v9c0 4-5 7-5 7z"/>
+                  <path d="M12 22s5-3 5-7V6l-5-2.5L7 6v9c0 4 5 7 5 7z" opacity="0.5"/>
+                </svg>,
+              ];
+              return (
+                <div key={item.title} className="fade-in" style={{ padding: "1.5rem" }}>
+                  <div style={{ width: 50, height: 50, background: "var(--tech-green)", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20 }}>
+                    {icons[index]}
+                  </div>
+                  <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "1.05rem", fontWeight: 700, color: "var(--navy-800)", margin: "0 0 10px" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.875rem", color: "rgba(13,31,78,0.6)", lineHeight: 1.7, margin: 0 }}>
+                    {item.desc}
+                  </p>
                 </div>
-                <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "1.05rem", fontWeight: 700, color: "var(--navy-800)", margin: "0 0 10px" }}>
-                  {item.title}
-                </h3>
-                <p style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.875rem", color: "rgba(13,31,78,0.6)", lineHeight: 1.7, margin: 0 }}>
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
