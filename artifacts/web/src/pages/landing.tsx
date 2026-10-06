@@ -208,14 +208,11 @@ export default function Landing() {
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 32 }}>
-            {COPY.problem.items.map((item) => (
-              <div key={item.title} className="fade-in" style={{ padding: "1.5rem" }}>
-                <div style={{ fontSize: "2rem", marginBottom: 12 }}>{item.icon}</div>
-                <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "1.05rem", fontWeight: 700, color: "var(--navy-800)", margin: "0 0 10px" }}>
-                  {item.title}
-                </h3>
-                <p style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.875rem", color: "rgba(13,31,78,0.6)", lineHeight: 1.7, margin: 0 }}>
-                  {item.description}
+            {COPY.problem.items.map((item, index) => (
+              <div key={index} className="fade-in" style={{ padding: "1.5rem", display: "flex", gap: 12 }}>
+                <div style={{ fontSize: "1.5rem", flexShrink: 0 }}>⚠️</div>
+                <p style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.95rem", color: "rgba(13,31,78,0.65)", lineHeight: 1.7, margin: 0 }}>
+                  {item}
                 </p>
               </div>
             ))}
