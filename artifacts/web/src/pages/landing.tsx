@@ -126,10 +126,42 @@ export default function Landing() {
           <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 2rem" }}>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))" }}>
               {[
-                { icon: "🛡️", title: "GESTÃO DE RISCOS", desc: "Estratégias completas para proteger o que mais importa." },
-                { icon: "📈", title: "FOCO NO CRESCIMENTO", desc: "Soluções que acompanham cada etapa da jornada." },
-                { icon: "💡", title: "EXPERTISE EM TECNOLOGIA", desc: "Entendemos o ecossistema de inovação." },
-                { icon: "🌍", title: "PARCEIROS LÍDERES", desc: "Acesso às melhores seguradoras globais." },
+                {
+                  icon: (
+                    <svg width="24" height="24" fill="none" stroke="var(--tech-green)" strokeWidth="1.5" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+                    </svg>
+                  ),
+                  title: "GESTÃO DE RISCOS",
+                  desc: "Estratégias completas para proteger o que mais importa: seu negócio.",
+                },
+                {
+                  icon: (
+                    <svg width="24" height="24" fill="none" stroke="var(--tech-green)" strokeWidth="1.5" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/>
+                    </svg>
+                  ),
+                  title: "FOCO NO CRESCIMENTO",
+                  desc: "Soluções que acompanham cada etapa da jornada da sua empresa.",
+                },
+                {
+                  icon: (
+                    <svg width="24" height="24" fill="none" stroke="var(--tech-green)" strokeWidth="1.5" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
+                    </svg>
+                  ),
+                  title: "EXPERTISE EM TECNOLOGIA",
+                  desc: "Entendemos os desafios do ecossistema de inovação e famos junto com você.",
+                },
+                {
+                  icon: (
+                    <svg width="24" height="24" fill="none" stroke="var(--tech-green)" strokeWidth="1.5" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0121 12c0 .778-.099 1.533-.284 2.253M3 12c0 .778.099 1.533.284 2.253"/>
+                    </svg>
+                  ),
+                  title: "PARCEIROS LÍDERES",
+                  desc: "Acesso às melhores seguradoras e soluções do mercado global.",
+                },
               ].map(({ icon, title, desc }) => (
                 <div
                   key={title}
@@ -140,7 +172,7 @@ export default function Landing() {
                     gap: 4,
                   }}
                 >
-                  <div style={{ fontSize: "1.5rem" }}>{icon}</div>
+                  <div>{icon}</div>
                   <div
                     style={{
                       fontFamily: "'Montserrat', sans-serif",
