@@ -591,101 +591,188 @@ export default function Landing() {
 
           <div
             style={{
-              background: "rgba(255,255,255,0.05)",
-              border: "1px solid rgba(255,255,255,0.1)",
+              background: "#fff",
+              border: "1px solid var(--cream-200)",
               borderRadius: 10,
               padding: 40,
-              maxWidth: 600,
+              maxWidth: 700,
               margin: "0 auto",
             }}
           >
-            <form style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "1.3rem", fontWeight: 700, color: "var(--navy-800)", margin: "0 0 24px", textAlign: "center" }}>
+              Solicitar Análise Gratuita
+            </h3>
+            <p style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.9rem", color: "rgba(13,31,78,0.6)", textAlign: "center", margin: "0 0 24px" }}>
+              Receba uma recomendação técnica personalizada
+            </p>
+            <form style={{ display: "flex", flexDirection: "column", gap: 20 }}>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-                <input
-                  type="text"
-                  placeholder="Seu nome"
-                  style={{
+                <div>
+                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "var(--navy-800)", marginBottom: 6, display: "block", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+                    Nome
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Seu nome completo"
+                    style={{
+                      width: "100%",
+                      fontFamily: "'Hind', sans-serif",
+                      fontSize: "0.9rem",
+                      padding: "12px 14px",
+                      border: "1px solid var(--cream-200)",
+                      borderRadius: 6,
+                      background: "#fff",
+                      color: "var(--navy-800)",
+                      boxSizing: "border-box",
+                    }}
+                  />
+                </div>
+                <div>
+                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "var(--navy-800)", marginBottom: 6, display: "block", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="seu@email.com"
+                    style={{
+                      width: "100%",
+                      fontFamily: "'Hind', sans-serif",
+                      fontSize: "0.9rem",
+                      padding: "12px 14px",
+                      border: "1px solid var(--cream-200)",
+                      borderRadius: 6,
+                      background: "#fff",
+                      color: "var(--navy-800)",
+                      boxSizing: "border-box",
+                    }}
+                  />
+                </div>
+              </div>
+
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                <div>
+                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "var(--navy-800)", marginBottom: 6, display: "block", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+                    Telefone
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="(11) 9 0000-0000"
+                    style={{
+                      width: "100%",
+                      fontFamily: "'Hind', sans-serif",
+                      fontSize: "0.9rem",
+                      padding: "12px 14px",
+                      border: "1px solid var(--cream-200)",
+                      borderRadius: 6,
+                      background: "#fff",
+                      color: "var(--navy-800)",
+                      boxSizing: "border-box",
+                    }}
+                  />
+                </div>
+                <div>
+                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "var(--navy-800)", marginBottom: 6, display: "block", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+                    Empresa
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Nome da empresa"
+                    style={{
+                      width: "100%",
+                      fontFamily: "'Hind', sans-serif",
+                      fontSize: "0.9rem",
+                      padding: "12px 14px",
+                      border: "1px solid var(--cream-200)",
+                      borderRadius: 6,
+                      background: "#fff",
+                      color: "var(--navy-800)",
+                      boxSizing: "border-box",
+                    }}
+                  />
+                </div>
+              </div>
+
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                <div>
+                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "var(--navy-800)", marginBottom: 6, display: "block", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+                    Tecnologia
+                  </label>
+                  <select style={{
+                    width: "100%",
                     fontFamily: "'Hind', sans-serif",
                     fontSize: "0.9rem",
-                    padding: "10px 14px",
-                    border: "1px solid rgba(255,255,255,0.2)",
+                    padding: "12px 14px",
+                    border: "1px solid var(--cream-200)",
                     borderRadius: 6,
-                    background: "rgba(255,255,255,0.05)",
-                    color: "#fff",
-                  }}
-                  onFocus={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
-                  onBlur={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.05)")}
-                />
-                <input
-                  type="text"
-                  placeholder="Sua empresa"
-                  style={{
+                    background: "#fff",
+                    color: "var(--navy-800)",
+                    boxSizing: "border-box",
+                  }}>
+                    <option>Selecione</option>
+                    <option>SaaS</option>
+                    <option>Desenvolvimento de Software</option>
+                    <option>Consultoria Tech</option>
+                    <option>Agência Digital</option>
+                    <option>Infraestrutura</option>
+                    <option>Outro</option>
+                  </select>
+                </div>
+                <div>
+                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "var(--navy-800)", marginBottom: 6, display: "block", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+                    Faturamento Anual
+                  </label>
+                  <select style={{
+                    width: "100%",
                     fontFamily: "'Hind', sans-serif",
                     fontSize: "0.9rem",
-                    padding: "10px 14px",
-                    border: "1px solid rgba(255,255,255,0.2)",
+                    padding: "12px 14px",
+                    border: "1px solid var(--cream-200)",
                     borderRadius: 6,
-                    background: "rgba(255,255,255,0.05)",
-                    color: "#fff",
+                    background: "#fff",
+                    color: "var(--navy-800)",
+                    boxSizing: "border-box",
+                  }}>
+                    <option>Selecione</option>
+                    <option>Até R$ 500k</option>
+                    <option>R$ 500k - R$ 2M</option>
+                    <option>R$ 2M - R$ 5M</option>
+                    <option>R$ 5M - R$ 10M</option>
+                    <option>Acima de R$ 10M</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "var(--navy-800)", marginBottom: 6, display: "block", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+                  Mensagem (opcional)
+                </label>
+                <textarea
+                  placeholder="Conte sobre sua empresa e necessidades de seguro..."
+                  rows={4}
+                  style={{
+                    width: "100%",
+                    fontFamily: "'Hind', sans-serif",
+                    fontSize: "0.9rem",
+                    padding: "12px 14px",
+                    border: "1px solid var(--cream-200)",
+                    borderRadius: 6,
+                    background: "#fff",
+                    color: "var(--navy-800)",
+                    resize: "none",
+                    boxSizing: "border-box",
                   }}
-                  onFocus={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
-                  onBlur={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.05)")}
                 />
               </div>
-              <input
-                type="email"
-                placeholder="Email corporativo"
-                style={{
-                  fontFamily: "'Hind', sans-serif",
-                  fontSize: "0.9rem",
-                  padding: "10px 14px",
-                  border: "1px solid rgba(255,255,255,0.2)",
-                  borderRadius: 6,
-                  background: "rgba(255,255,255,0.05)",
-                  color: "#fff",
-                }}
-                onFocus={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
-                onBlur={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.05)")}
-              />
-              <input
-                type="tel"
-                placeholder="WhatsApp (com DDD)"
-                style={{
-                  fontFamily: "'Hind', sans-serif",
-                  fontSize: "0.9rem",
-                  padding: "10px 14px",
-                  border: "1px solid rgba(255,255,255,0.2)",
-                  borderRadius: 6,
-                  background: "rgba(255,255,255,0.05)",
-                  color: "#fff",
-                }}
-                onFocus={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
-                onBlur={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.05)")}
-              />
-              <textarea
-                placeholder="Conte um pouco sobre sua empresa (opcional)"
-                rows={4}
-                style={{
-                  fontFamily: "'Hind', sans-serif",
-                  fontSize: "0.9rem",
-                  padding: "10px 14px",
-                  border: "1px solid rgba(255,255,255,0.2)",
-                  borderRadius: 6,
-                  background: "rgba(255,255,255,0.05)",
-                  color: "#fff",
-                  resize: "none",
-                }}
-                onFocus={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
-                onBlur={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.05)")}
-              />
-              <label style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: "0.8rem", color: "rgba(255,255,255,0.5)" }}>
+
+              <label style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: "0.8rem", color: "rgba(13,31,78,0.65)" }}>
                 <input
                   type="checkbox"
-                  style={{ marginTop: 4 }}
+                  style={{ marginTop: 4, cursor: "pointer" }}
                   required
                 />
                 <span>Concordo com a política de privacidade e desejo receber informações sobre a Docka Seguros</span>
               </label>
+
               <button
                 type="submit"
                 style={{
