@@ -359,9 +359,9 @@ export default function Landing() {
               const imageMap: { [key: string]: string } = {
                 "01": `${import.meta.env.BASE_URL}images/process-01-analise.jpg`,
                 "02": `${import.meta.env.BASE_URL}images/process-02-cotacao.jpg`,
-                "03": `${import.meta.env.BASE_URL}images/process-03-recomendacao.jpg`,
-                "04": `${import.meta.env.BASE_URL}images/process-04-contratacao.jpg`,
-                "05": `${import.meta.env.BASE_URL}images/process-05-gestao.jpg`,
+                "03": `${import.meta.env.BASE_URL}images/process-03-recomendacao.webp`,
+                "04": `${import.meta.env.BASE_URL}images/process-04-contratacao.webp`,
+                "05": `${import.meta.env.BASE_URL}images/process-05-gestao.webp`,
               };
               return (
                 <div key={item.step} className="fade-in" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center", marginBottom: index < COPY.howItWorks.items.length - 1 ? "4rem" : 0, gridAutoFlow: index % 2 === 1 ? "dense" : "row" }}>

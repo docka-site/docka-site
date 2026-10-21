@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { submitLeadForm } from "@/lib/hubspot";
 
 interface FormLeadsProps {
   onSuccess?: () => void;
@@ -35,8 +34,12 @@ export function FormLeads({ onSuccess, title, subtitle }: FormLeadsProps) {
     setError("");
 
     try {
-      const success = await submitLeadForm(formData);
-      if (success) {
+      const res = await fetch("/api/leads/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
         setSubmitted(true);
         setFormData({
           firstname: "",

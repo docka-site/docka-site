@@ -1,18 +1,5 @@
 const PORTAL_ID = import.meta.env.VITE_HUBSPOT_PORTAL_ID;
-const FORM_ID_LEADS = import.meta.env.VITE_HUBSPOT_FORM_ID_LEADS;
 const FORM_ID_PARTNERS = import.meta.env.VITE_HUBSPOT_FORM_ID_PARTNERS;
-
-interface LeadData {
-  firstname?: string;
-  lastname?: string;
-  email?: string;
-  phone?: string;
-  company?: string;
-  jobtitle?: string;
-  hs_lead_status?: string;
-  lifecyclestage?: string;
-  [key: string]: string | undefined;
-}
 
 interface PartnerData {
   firstname?: string;
@@ -23,51 +10,6 @@ interface PartnerData {
   hs_lead_status?: string;
   lifecyclestage?: string;
   [key: string]: string | undefined;
-}
-
-export async function submitLeadForm(data: LeadData): Promise<boolean> {
-  if (!PORTAL_ID) {
-    console.error("HubSpot credentials not configured");
-    return false;
-  }
-
-  try {
-    const payload = {
-      properties: [
-        { property: "firstname", value: data.firstname || "" },
-        { property: "lastname", value: data.lastname || "" },
-        { property: "email", value: data.email || "" },
-        { property: "phone", value: data.phone || "" },
-        { property: "company", value: data.company || "" },
-        { property: "jobtitle", value: data.jobtitle || "" },
-      ]
-    };
-
-    console.log("HubSpot Payload:", JSON.stringify(payload, null, 2));
-
-    const response = await fetch(
-      `https://api.hubapi.com/crm/v3/objects/contacts`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${import.meta.env.VITE_HUBSPOT_API_KEY || ''}`,
-        },
-        body: JSON.stringify(payload),
-      }
-    );
-
-    if (response.ok) {
-      console.log("Lead submitted successfully");
-      return true;
-    } else {
-      console.error("Failed to submit lead:", response.status, response.statusText);
-      return false;
-    }
-  } catch (error) {
-    console.error("Error submitting lead:", error);
-    return false;
-  }
 }
 
 export async function submitPartnerForm(data: PartnerData): Promise<boolean> {
