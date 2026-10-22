@@ -308,6 +308,11 @@ export function FormLeads({ onSuccess, title, subtitle }: FormLeadsProps) {
         }}
       />
 
+      <label style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: "0.8rem", color: "rgba(13,31,78,0.65)", marginBottom: 16 }}>
+        <input type="checkbox" style={{ marginTop: 4, cursor: "pointer" }} required />
+        <span>Concordo com a política de privacidade e desejo receber informações sobre a Docka Seguros</span>
+      </label>
+
       <button
         type="submit"
         disabled={loading}
@@ -339,18 +344,6 @@ export function FormLeads({ onSuccess, title, subtitle }: FormLeadsProps) {
       >
         {loading ? "Enviando..." : "Solicitar Análise"}
       </button>
-
-      <p
-        style={{
-          fontFamily: "'Hind', sans-serif",
-          fontSize: "0.8rem",
-          color: "rgba(13,31,78,0.5)",
-          marginTop: 14,
-          textAlign: "center",
-        }}
-      >
-        Responderemos em até 1 dia útil
-      </p>
     </form>
   );
 }

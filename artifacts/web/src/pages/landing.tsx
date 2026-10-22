@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout";
 import { Link } from "wouter";
 import { COPY } from "@/config/content";
+import { FormLeads } from "@/components/form-leads";
 
 const SAILBOAT_PHOTO = `${import.meta.env.BASE_URL}images/hero-sailboat-v3.png`;
 
@@ -585,7 +586,7 @@ export default function Landing() {
               Pronto para começar?
             </h2>
             <p style={{ fontFamily: "'Hind', sans-serif", color: "rgba(255,255,255,0.6)", fontSize: "0.95rem", lineHeight: 1.7, margin: "16px 0 0", maxWidth: 500 }}>
-              Preencha o formulário abaixo para solicitar sua análise técnica. Responderemos em até 1 dia útil.
+              Preencha o formulário abaixo para solicitar sua análise técnica.
             </p>
           </div>
 
@@ -599,206 +600,10 @@ export default function Landing() {
               margin: "0 auto",
             }}
           >
-            <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "1.3rem", fontWeight: 700, color: "var(--navy-800)", margin: "0 0 24px", textAlign: "center" }}>
-              Solicitar Análise Gratuita
-            </h3>
-            <p style={{ fontFamily: "'Hind', sans-serif", fontSize: "0.9rem", color: "rgba(13,31,78,0.6)", textAlign: "center", margin: "0 0 24px" }}>
-              Receba uma recomendação técnica personalizada
-            </p>
-            <form style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-                <div>
-                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "var(--navy-800)", marginBottom: 6, display: "block", letterSpacing: "0.05em", textTransform: "uppercase" }}>
-                    Nome
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Seu nome completo"
-                    style={{
-                      width: "100%",
-                      fontFamily: "'Hind', sans-serif",
-                      fontSize: "0.9rem",
-                      padding: "12px 14px",
-                      border: "1px solid var(--cream-200)",
-                      borderRadius: 6,
-                      background: "#fff",
-                      color: "var(--navy-800)",
-                      boxSizing: "border-box",
-                    }}
-                  />
-                </div>
-                <div>
-                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "var(--navy-800)", marginBottom: 6, display: "block", letterSpacing: "0.05em", textTransform: "uppercase" }}>
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="seu@email.com"
-                    style={{
-                      width: "100%",
-                      fontFamily: "'Hind', sans-serif",
-                      fontSize: "0.9rem",
-                      padding: "12px 14px",
-                      border: "1px solid var(--cream-200)",
-                      borderRadius: 6,
-                      background: "#fff",
-                      color: "var(--navy-800)",
-                      boxSizing: "border-box",
-                    }}
-                  />
-                </div>
-              </div>
-
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-                <div>
-                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "var(--navy-800)", marginBottom: 6, display: "block", letterSpacing: "0.05em", textTransform: "uppercase" }}>
-                    Telefone
-                  </label>
-                  <input
-                    type="tel"
-                    placeholder="(11) 9 0000-0000"
-                    style={{
-                      width: "100%",
-                      fontFamily: "'Hind', sans-serif",
-                      fontSize: "0.9rem",
-                      padding: "12px 14px",
-                      border: "1px solid var(--cream-200)",
-                      borderRadius: 6,
-                      background: "#fff",
-                      color: "var(--navy-800)",
-                      boxSizing: "border-box",
-                    }}
-                  />
-                </div>
-                <div>
-                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "var(--navy-800)", marginBottom: 6, display: "block", letterSpacing: "0.05em", textTransform: "uppercase" }}>
-                    Empresa
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Nome da empresa"
-                    style={{
-                      width: "100%",
-                      fontFamily: "'Hind', sans-serif",
-                      fontSize: "0.9rem",
-                      padding: "12px 14px",
-                      border: "1px solid var(--cream-200)",
-                      borderRadius: 6,
-                      background: "#fff",
-                      color: "var(--navy-800)",
-                      boxSizing: "border-box",
-                    }}
-                  />
-                </div>
-              </div>
-
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-                <div>
-                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "var(--navy-800)", marginBottom: 6, display: "block", letterSpacing: "0.05em", textTransform: "uppercase" }}>
-                    Tecnologia
-                  </label>
-                  <select style={{
-                    width: "100%",
-                    fontFamily: "'Hind', sans-serif",
-                    fontSize: "0.9rem",
-                    padding: "12px 14px",
-                    border: "1px solid var(--cream-200)",
-                    borderRadius: 6,
-                    background: "#fff",
-                    color: "var(--navy-800)",
-                    boxSizing: "border-box",
-                  }}>
-                    <option>Selecione</option>
-                    <option>SaaS</option>
-                    <option>Desenvolvimento de Software</option>
-                    <option>Consultoria Tech</option>
-                    <option>Agência Digital</option>
-                    <option>Infraestrutura</option>
-                    <option>Outro</option>
-                  </select>
-                </div>
-                <div>
-                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "var(--navy-800)", marginBottom: 6, display: "block", letterSpacing: "0.05em", textTransform: "uppercase" }}>
-                    Faturamento Anual
-                  </label>
-                  <select style={{
-                    width: "100%",
-                    fontFamily: "'Hind', sans-serif",
-                    fontSize: "0.9rem",
-                    padding: "12px 14px",
-                    border: "1px solid var(--cream-200)",
-                    borderRadius: 6,
-                    background: "#fff",
-                    color: "var(--navy-800)",
-                    boxSizing: "border-box",
-                  }}>
-                    <option>Selecione</option>
-                    <option>Até R$ 500k</option>
-                    <option>R$ 500k - R$ 2M</option>
-                    <option>R$ 2M - R$ 5M</option>
-                    <option>R$ 5M - R$ 10M</option>
-                    <option>Acima de R$ 10M</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "var(--navy-800)", marginBottom: 6, display: "block", letterSpacing: "0.05em", textTransform: "uppercase" }}>
-                  Mensagem (opcional)
-                </label>
-                <textarea
-                  placeholder="Conte sobre sua empresa e necessidades de seguro..."
-                  rows={4}
-                  style={{
-                    width: "100%",
-                    fontFamily: "'Hind', sans-serif",
-                    fontSize: "0.9rem",
-                    padding: "12px 14px",
-                    border: "1px solid var(--cream-200)",
-                    borderRadius: 6,
-                    background: "#fff",
-                    color: "var(--navy-800)",
-                    resize: "none",
-                    boxSizing: "border-box",
-                  }}
-                />
-              </div>
-
-              <label style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: "0.8rem", color: "rgba(13,31,78,0.65)" }}>
-                <input
-                  type="checkbox"
-                  style={{ marginTop: 4, cursor: "pointer" }}
-                  required
-                />
-                <span>Concordo com a política de privacidade e desejo receber informações sobre a Docka Seguros</span>
-              </label>
-
-              <button
-                type="submit"
-                style={{
-                  background: "var(--tech-green)",
-                  color: "#0d1b3e",
-                  fontFamily: "'Montserrat', sans-serif",
-                  fontWeight: 700,
-                  fontSize: "0.78rem",
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  padding: "1rem",
-                  borderRadius: 6,
-                  border: "none",
-                  cursor: "pointer",
-                  transition: "all 0.2s",
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLButtonElement).style.background = "var(--tech-green-dark)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLButtonElement).style.background = "var(--tech-green)";
-                }}
-              >
-                Solicitar Análise
-              </button>
-            </form>
+            <FormLeads
+              title="Solicitar Análise Gratuita"
+              subtitle="Receba uma recomendação técnica personalizada"
+            />
           </div>
         </div>
       </section>
